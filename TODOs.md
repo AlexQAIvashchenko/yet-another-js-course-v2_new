@@ -1,19 +1,7 @@
-TODOs list:
+# TODOs list:
 
-[ ] fix scripts
-
-[ ] split tasks into 3 category in each file - mandatory/easy, medium/optional & expert/optional
-
-[ ] mandatory tests should be launched all at once and show error
-
-[ ] optional tests should not launched in case task variable is undefined or somehing similar that states it's not started
-
-[ ] update package json scripts to be launched for corespondent task files
-
-[ ] fix workflows to be launched on changes in corespondent files
-
-Tasks changes:
-[ ] move tasks from callbacks.js (that not related to async programming) to functions and promises
+## Tasks changes:
+[ ] move tasks from callbacks.js (that not related to async programming) to functions and async callbacks to promises
 
 [ ] new class tasks
 
@@ -30,5 +18,20 @@ Tasks changes:
  */
 
  [ ] cycles modify to have 3 different tasks for different cycles - instead of factorial
+
+## Tests and scripts
+
+[ ] fix scripts
+
+[ ] split tasks into 3 category in each file - mandatory/easy, medium/optional & expert/optional
+
+[ ] mandatory tests should be launched all at once and show error
+
+[ ] optional tests should not launched in case task variable is undefined or somehing similar that states it's not started
+
+[ ] update package json scripts to be launched for corespondent task files
+
+[ ] fix workflows to be launched on changes in corespondent files
+
 
 

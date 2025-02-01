@@ -30,9 +30,12 @@
 
 // enter your code here
 
-// /
-// / ----- Starting from here I'd recommend to use let (or const if applicable) variables
-// /
+/*
+/////
+  Starting from this line I'd recommend to use `let` (or const if applicable) to initialize variables
+/////
+*/
+
 
 /**
  * Level - Easy
@@ -63,39 +66,9 @@
 // enter your code here
 
 /**
- * Level - Normal
+ * Level - Easy
  * Create variable named myArr1_1 and set its value to be an empty array
  * make first array element to be equal to 'I am the first'
- */
-
-// enter your code here
-
-/**
- * Level - Normal
- * Create variable named myArr2 and set its value to be an empty array using Array constructor
- * NOTE: use `new Array` syntax
- */
-
-// enter your code here
-
-/**
- * Level - Normal
- * Create variable named myArr3 and set its value to be an array of length 3 and have empty elements
- * use Array constructor
- * NOTE: use `new Array` syntax
- */
-
-// enter your code here
-
-/**
- * Level - Normal
- * Create variable named myArr4 and set its value to be an array of length 4 and have next elements:
- * first element = 10
- * second element = null
- * third element = "I'm the third one"
- * fours element = false
- * use Array constructor
- * NOTE: use `new Array` syntax
  */
 
 // enter your code here
@@ -133,14 +106,14 @@
 // enter your code here
 
 /**
- * Level - Normal
+ * Level - Easy
  * Create variable named myBool2 and set its value to be equality comparison (not strict) of myNum and myNum2 variables
  */
 
 // enter your code here
 
 /**
- * Level - Normal
+ * Level - Easy
  * Create variable named myBool3 and set its value to be strict equality comparison of myNum2 variable and "37"
  * NOTE: string should be used
  */
@@ -184,9 +157,6 @@ module.exports = {
   myArr,
   myArr1,
   myArr1_1,
-  myArr2,
-  myArr3,
-  myArr4,
   fourthElement,
   arrayOperations,
   myUndefined2,
