@@ -1,0 +1,15 @@
+name: Test for Unit 1 - Conditions - Medium
+
+run-name: Running tests for Unit 1 - Conditions - Medium
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-1/2-optional-medium/2_conditions_optional.js'
+jobs:
+  test-unit-1-conditions-medium:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit1:conditions:medium'

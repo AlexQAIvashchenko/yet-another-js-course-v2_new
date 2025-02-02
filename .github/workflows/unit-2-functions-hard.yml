@@ -1,0 +1,15 @@
+name: Test for Unit 2 - Functions - Hard
+
+run-name: Running tests for Unit 2 - Functions - Hard
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-2/3-optional-hard/**.js'
+jobs:
+  test-unit-2-functions-hard:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit2:functions:hard'

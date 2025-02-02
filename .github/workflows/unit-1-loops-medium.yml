@@ -1,0 +1,15 @@
+name: Test for Unit 1 - Loops - Medium
+
+run-name: Running tests for Unit 1 - Loops - Medium
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-1/2-optional-medium/3_loops_optional.js'
+jobs:
+  test-unit-1-variables-medium:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit1:loops:medium'

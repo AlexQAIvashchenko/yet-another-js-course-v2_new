@@ -1,0 +1,15 @@
+name: Test for Unit 2 - Functions - Easy
+
+run-name: Running tests for Unit 2 - Functions - Easy
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-2/1-mandatory-easy/**.js'
+jobs:
+  test-unit-2-functions-easy:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit2:functions:easy'
