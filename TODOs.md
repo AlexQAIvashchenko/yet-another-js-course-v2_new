@@ -20,7 +20,7 @@
 * task11 = (a > b || b < 10) && true;
 */
 
-[ ] cycles modify to have 3 different tasks for different cycles - instead of factorial
+[x] cycles modify to have 3 different tasks for different cycles - instead of factorial
 
 ## Tests and scripts
 
