@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const conditions = require('../../2-optional-medium/2_conditions_optional');
 
-describe('Unit 1 - Optional - Conditions:', () => {
+describe('Unit 1 - Optional - Medium - Conditions:', () => {
   describe('Task 1 - "operator" and 2 numbers', () => {
     it('Verifying task1 variable', () => {
       const ex = expect(conditions.task1);

@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const loops = require('../../2-optional-medium/3_loops_optional');
 
-describe('Unit 1 - Optional - Loops:', () => {
+describe('Unit 1 - Optional - Medium - Loops:', () => {
   describe('Task 1 - Factorial', () => {
     let res = 1;
 

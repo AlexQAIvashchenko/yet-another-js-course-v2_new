@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const vars = require('../../2-optional-medium/1_variables_optional');
 
-describe('Unit 1 - Optional - Variables and Data Types:', () => {
+describe('Unit 1 - Optional - Medium - Variables and Data Types:', () => {
   it('Task 1 - "myArr1" variable should be created and be an empty array', () => {
     expect(Array.isArray(vars.myArr1)).to.equal(true);
     expect(vars.myArr1.length, '"myArr1" length is not correct').to.equal(0);
