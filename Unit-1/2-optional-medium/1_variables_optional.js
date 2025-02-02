@@ -7,6 +7,7 @@
 
 /**
  * Level - Normal
+ * Task - 1
  * Create variable named myArr1 and set its value to be an empty array using Array constructor
  * NOTE: use `new Array` syntax
  */
@@ -15,6 +16,7 @@
 
 /**
  * Level - Normal
+ * Task - 2
  * Create variable named myArr2 and set its value to be an array of length 3 and have empty elements
  * use Array constructor
  * NOTE: use `new Array` syntax
@@ -24,6 +26,7 @@
 
 /**
  * Level - Normal
+ * Task - 3
  * Create variable named myArr3 and set its value to be an array of length 4 and have next elements:
  * first element = 10
  * second element = null
