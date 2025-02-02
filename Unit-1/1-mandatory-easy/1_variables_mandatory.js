@@ -11,6 +11,7 @@
 
 /**
  * Level - Easy
+ * Task - 1
  * Create "var" variable named myNum and set its value equal to 74
  */
 
@@ -18,6 +19,7 @@
 
 /**
  * Level - Easy
+ * Task - 2
  * Create "let" variable named myText and set its value equal to "Jack"
  */
 
@@ -25,20 +27,17 @@
 
 /**
  * Level - Easy
+ * Task - 3
  * Create "const" variable named myBool and set its value equal to false
  */
 
 // enter your code here
 
-/*
-/////
-  Starting from this line I'd recommend to use `let` (or const if applicable) to initialize variables
-/////
-*/
-
+// !!! Starting from this line I'd recommend to use `let` (or const if applicable) to initialize variables
 
 /**
  * Level - Easy
+ * Task - 4
  * Create variable named myNull and set its value equal to null
  */
 
@@ -46,6 +45,7 @@
 
 /**
  * Level - Easy
+ * Task - 5
  * Create variable named myUndefined and set its value equal to undefined
  */
 
@@ -53,6 +53,7 @@
 
 /**
  * Level - Easy
+ * Task - 6
  * Create variable named myArr and set its value to be an array of numbers from 2 to 7
  */
 
@@ -60,6 +61,7 @@
 
 /**
  * Level - Easy
+ * Task - 7
  * Create variable named myArr1 and set its value to be an empty array
  */
 
@@ -67,6 +69,7 @@
 
 /**
  * Level - Easy
+ * Task - 8
  * Create variable named myArr1_1 and set its value to be an empty array
  * make first array element to be equal to 'I am the first'
  */
@@ -75,6 +78,7 @@
 
 /**
  * Level - Easy
+ * Task - 9
  * Create variable named fourthElement and set its value to be myArr 4th element
  * NOTE: you should use myArr variable here
  */
@@ -83,6 +87,7 @@
 
 /**
  * Level - Easy
+ * Task - 10
  * Create variable named arrayOperations and set its value to be myArr 4th element minus myArr 3d element
  * NOTE: you should use myArr variable here
  */
@@ -91,6 +96,7 @@
 
 /**
  * Level - Easy
+ * Task - 11
  * Create variable named myNum2 and set its value equal myNum divided by 2
  * NOTE: you should use myNum variable here
  */
@@ -99,6 +105,7 @@
 
 /**
  * Level - Easy
+ * Task - 12
  * Create variable named myText2 and set its value to be myText, then goes space and word is, then space and myNum2
  * NOTE: Use myText and myNum2 variables to solve it. Result should be something like "George is 21"
  */
@@ -107,6 +114,7 @@
 
 /**
  * Level - Easy
+ * Task - 13
  * Create variable named myBool2 and set its value to be equality comparison (not strict) of myNum and myNum2 variables
  */
 
@@ -114,6 +122,7 @@
 
 /**
  * Level - Easy
+ * Task - 14
  * Create variable named myBool3 and set its value to be strict equality comparison of myNum2 variable and "37"
  * NOTE: string should be used
  */
@@ -121,6 +130,8 @@
 // enter your code here
 
 /**
+ * Level - Easy
+ * Task - 15
  * Create variable named myUndefined2 and set its value equal to undefined without "undefined" word usage
  */
 
@@ -128,6 +139,7 @@
 
 /**
  * Level - Easy
+ * Task - 16
  * Create variable named myObj and set its value as object with key firstName and value "John"
  */
 
@@ -135,6 +147,7 @@
 
 /**
  * Level - Easy
+ * Task - 17
  * Set new key/property to myObj object named lastName with value "Dou"
  */
 
@@ -142,6 +155,7 @@
 
 /**
  * Level - Easy
+ * Task - 18
  * Set new key/property to myObj object named fullName with value of concatenation of firstName, space, and lastName
  * NOTE: you should use myObj in this task
  */
