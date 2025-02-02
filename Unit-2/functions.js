@@ -223,16 +223,6 @@ function task15Func(discountPercentage) {
   };
 }
 
-/**
- * Hardcore tasks from codewars.com:
- *
- * https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
- * https://www.codewars.com/kata/5b752a42b11814b09c00005d
- * the last one requires recursion check below for help
- * https://uk.javascript.info/recursion
- * https://www.programiz.com/javascript/recursion
- */
-
 module.exports = {
   task1Func,
   task2Func,

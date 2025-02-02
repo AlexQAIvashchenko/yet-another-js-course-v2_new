@@ -8,7 +8,7 @@
 
 [ ] add new promises tasks
 
-[ ] Modify task to fiz buzz in case of different conditions
+[x] Modify task to fizzbuzz in case of different conditions
 
 /**
 * Level - Normal
