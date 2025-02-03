@@ -15,8 +15,8 @@ const chance = new Chance();
 /**
  * Level - Easy
  * Task - 1
- * create a function task1Func which will always return true
- * use function definition (also called a function declaration, or function statement)
+ * Create a function task1Func which will always return true
+ * Use function definition (also called a function declaration, or function statement)
  */
 
 // enter your code here
@@ -24,9 +24,9 @@ const chance = new Chance();
 /**
  * Level - Easy
  * Task - 2
- * create a variable task2Func which will contain a function
+ * Create a variable task2Func which will contain a function
  * which will take year of birth as a parameter and returns calculated age based on current year
- * use function expression
+ * Use function expression
  */
 
 // enter your code here
@@ -34,10 +34,10 @@ const chance = new Chance();
 /**
  * Level - Easy
  * Task - 3
- * create a variable task3Func which will contain a function
+ * Create a variable task3Func which will contain a function
  * which will take parameter gender as a number (where 1 stands for woman, 2 is man and 0 is other)
  * and returns text ee.g. "My gender is woman"
- * use function expression with arrow function notation
+ * Use function expression with arrow function notation
  */
 
 // enter your code here
@@ -45,8 +45,7 @@ const chance = new Chance();
 /**
  * Level - Easy
  * Task - 4
- * Create a function task4Func which will take 2 parameters
- * and calculate sum of those two params
+ * Create a function task4Func which will take 2 parameters and calculate sum of those two params
  * NOTE: assume parameters are always numbers
  */
 
@@ -57,8 +56,8 @@ function task4Func(/** add function parameters */) {
 /**
  * Level - Easy
  * Task - 5
- * Create a function task5Func which will do same as the function from Task4
- * just make second parameter to have a default value equal 10
+ * Create a function task5Func which will do same as the function from Task 4
+ * Just make second parameter to have a default value equal 10
  */
 
 function task5Func(/** add function parameters */) {
@@ -68,8 +67,7 @@ function task5Func(/** add function parameters */) {
 /**
  * Level - Easy
  * Task - 6
- * Create a function task6Func which will get an object
- * e.g. {firstName: "Jack", lastName: "London"}
+ * Create a function task6Func which will get an object, e.g. {firstName: "Jack", lastName: "London"}
  * and returns a string firstName plus lastName, separated by space
  */
 
@@ -82,6 +80,7 @@ function task6Func(/** add function parameters */) {
  * Task - 7
  * Create a function task7Func that returns an object based on the given information
  * (params may be null, please use default ones (empty strings and 0 for age))
+ *
  * @example
  * task7Func("Jack", "London", 52) should return
  * {
@@ -99,8 +98,8 @@ function task7Func(/** add function parameters */) {
  * Level - Easy
  * Task - 8
  * Create a function task8Func which checks if number is odd or even
- * And returns true if odd and false if even
- * Hint: think about a remainder of two numbers
+ * and returns true if odd and false if even
+ * HINT: think about a remainder of two numbers
  */
 
 function task8Func(/** add function parameters */) {
@@ -111,6 +110,7 @@ function task8Func(/** add function parameters */) {
  * Level - Easy
  * Task - 9
  * Create a function task9Func which returns the first shortest of the words in the given array
+ *
  * @example
  * task9Func(["ten", "two", "four"]) // => ten
  */
@@ -124,7 +124,7 @@ function task9Func(/** add function parameters */) {
  * Task - 10
  * Create a function task10Func which calculates total distance traveled
  * based on an array of objects with field distance and direction
- * e.g [{direction: "Kiyv - Krakow", distance: 879}, {direction: "Kiyv - Tokyo", distance: 8193}]
+ * e.g [ {direction: "Kiyv - Krakow", distance: 879 }, { direction: "Kiyv - Tokyo", distance: 8193 } ]
  */
 
 function task10Func(/** add function parameters */) {
@@ -153,85 +153,45 @@ const task11Func = (/** add function parameters */) => {
 };
 
 /**
- * Level - Normal
+ * Level - Easy
  * Task - 12
- * Rest parameter
- * Create a function task12Func which returns an object
- * containing number of parameters passed in function and first parameter value
- * @example
- * {
- *     paramsNumber: 3,
- *     firstParam: _first_param_value_,
- * }
- * Note: use rest parameter and use it to get first param value
- */
-
-const task12Func = (/** add function parameters */) => {
-  // enter your code here
-};
-
-/**
- * Level - Normal
- * Task - 13
- * Create a function task13Func which returns word google with given numbers of "o" symbols
- * @example
- * task13Func(5) // => gooooogle
- */
-
-const task13Func = (/** add function parameters */) => {
-  // enter your code here
-};
-
-/**
- * Level - Hardcore
- * Task - 14
- * Implement the methods inside the given object which:
- * 1. keys() - console logs keys of the given object (please use for..in cycle)
- * 2. call() - returns the string 'My name is Jack London, and I am 25 years old. My best friend is a wolf'
- * The string should be constructed using the properties from the object
- */
-
-const task14Object = {
-  name: 'John',
-  lastName: 'Doe',
-  age: 25,
-  friend: 'wolf',
-  keys() {
-    // enter your code here
-  },
-  call() {
-    // enter your code here
-  },
-};
-
-/**
- * Level - Hardcore
- * Task - 15
- * Create a function task15Func which will calculate a Final Price
- * considering the Price and the Discount Percentage
- * hint: you need to use the Closure here
- * JS Closures: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
- * @example
- * const discount10 = discountFunction(10);
- * console.log(discount10(90)); // 81
- * console.log(discount10(100)); // 90
- */
-
-function task15Func(discountPercentage) {
-  return function (amount) {
-    // enter your code here
-  };
-}
-
-/**
- * Hardcore tasks from codewars.com:
+ * Create a function addNumbers that takes two numbers and a callback function as parameters.
+ * Inside the function, calculate the sum of the two numbers.
+ * Once the sum is calculated, invoke the callback function with the resulting sum as an argument.
  *
- * https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
- * https://www.codewars.com/kata/5b752a42b11814b09c00005d
- * the last one requires recursion check below for help
- * https://uk.javascript.info/recursion
- * https://www.programiz.com/javascript/recursion
+ * @example
+ * usage of the created function should be like:
+ *      addNumbers(1, 2, someFuncWithParam)
+ *
+ * The output of the above code is ===> "Result = 3"
+ *
+ * if someFuncWithParam = (resultOfTheAsyncFunc) => console.log(`Result = ${resultOfTheAsyncFunc}`);
  */
+
+const someFuncWithParam = (resultOfTheCallbackFunc) => {
+  console.log(`Result = ${resultOfTheCallbackFunc}`);
+};
+
+// enter your code below
+let addNumbers;
+
+/**
+ * Level - Easy
+ * Task - 13
+ * Implement a function calculateSum that takes an array of numbers and a callback function as parameters.
+ * Inside the function, calculate the sum of the numbers in the array.
+ * Once the sum is calculated, invoke the callback function with the resulting sum.
+ *
+ * @example
+ * usage of the created function should be like:
+ *      calculateSum([1, 2, 3, 4], someFuncWithParam)
+ * The output of the above code is ===> "Result = 10"
+ *
+ * if someFuncWithParam = (resultOfTheAsyncFunc) => console.log(`Result = ${resultOfTheAsyncFunc}`);
+ */
+
+// enter your code below
+let calculateSum;
 
 module.exports = {
   task1Func,
@@ -245,8 +205,6 @@ module.exports = {
   task9Func,
   task10Func,
   task11Func,
-  task12Func,
-  task13Func,
-  task14Object,
-  task15Func,
+  addNumbers,
+  calculateSum,
 };

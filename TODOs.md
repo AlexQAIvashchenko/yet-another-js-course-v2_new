@@ -8,7 +8,7 @@
 
 [ ] add new promises tasks
 
-[ ] Modify task to fiz buzz in case of different conditions
+[x] Modify task to fizzbuzz in case of different conditions
 
 /**
 * Level - Normal
@@ -20,7 +20,7 @@
 * task11 = (a > b || b < 10) && true;
 */
 
-[ ] cycles modify to have 3 different tasks for different cycles - instead of factorial
+[x] cycles modify to have 3 different tasks for different cycles - instead of factorial
 
 ## Tests and scripts
 

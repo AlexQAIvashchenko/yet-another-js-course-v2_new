@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const _ = require('lodash');
 const Chance = require('chance');
 const chance = new Chance();
-const sinon = require('sinon');
+
 try {
   ({
     task1Func,
@@ -16,15 +16,13 @@ try {
     task9Func,
     task10Func,
     task11Func,
-    task12Func,
-    task13Func,
-    task14Object,
-    task15Func,
-  } = require('../functions'));
+    addNumbers,
+    calculateSum,
+  } = require('../../1-mandatory-easy/functions'));
 } catch (err) {
   console.error(
     '\x1b[41m',
-    'Error importing functions. Ensure all functions are implemented in functions.js file.',
+    'Error importing functions. Ensure all functions are implemented in 1-mandatory-easy/functions.js file.',
   );
 }
 
@@ -34,24 +32,24 @@ let removeLinesAndSpaces = (str) => {
 
 let getRandomNum = () => _.random(-999, 999);
 
-describe('Unit 3 - Easy - Functions:', () => {
-  describe('Task 1 - function declaration returns true', () => {
+describe('Unit 2 - Mandatory - Functions:', () => {
+  describe('Task 1 - Function declaration returns true', () => {
     it('Verifying task1Func function returns true', () => {
       expect(task1Func()).to.equal(true);
     });
+
     it('Verifying task1Func function is implemented using "function declaration"', () => {
-      expect(removeLinesAndSpaces(task1Func.toString())).to.contain(
-        'functiontask1Func(){',
-      );
+      expect(removeLinesAndSpaces(task1Func.toString())).to.contain('functiontask1Func(){');
     });
   });
 
-  describe('Task 2 - function expression returns age', () => {
+  describe('Task 2 - Function expression returns age', () => {
     [1, 10, 100, 1000, 1990, 2000, 2023].forEach((year) =>
       it(`Verifying task2Func function returns correct age for yob = ${year}`, () => {
         expect(task2Func(year)).to.equal(new Date().getFullYear() - year);
       }),
     );
+
     it('Verifying task2Func function is implemented using "function expression"', () => {
       expect(removeLinesAndSpaces(task2Func.toString())).to.contain(
         'function(',
@@ -59,7 +57,7 @@ describe('Unit 3 - Easy - Functions:', () => {
     });
   });
 
-  describe('Task 3 - arrow function returns gender', () => {
+  describe('Task 3 - Arrow function returns gender', () => {
     [
       { value: 0, gender: 'other' },
       { value: 1, gender: 'woman' },
@@ -69,24 +67,29 @@ describe('Unit 3 - Easy - Functions:', () => {
         expect(task3Func(el.value)).to.equal(`My gender is ${el.gender}`);
       });
     });
+
     it('Verifying task2Func function is implemented using "function expression"', () => {
       expect(removeLinesAndSpaces(task3Func.toString())).to.contain(')=>{');
     });
   });
-  describe('Task 4 - sum of 2 numbers', () => {
+
+  describe('Task 4 - Sum of 2 numbers', () => {
     const a = getRandomNum();
     const b = getRandomNum();
+
     it(`Verifying task4Func function returns correct sum for random numbers a=${a}, b=${b}`, () => {
       expect(task4Func(a, b)).to.equal(a + b);
     });
   });
 
-  describe('Task 5 - sum of 2 numbers with default value', () => {
+  describe('Task 5 - Sum of 2 numbers with default value', () => {
     const a = getRandomNum();
     const b = getRandomNum();
+
     it(`Verifying task5Func function returns correct sum if only a=${a} provided`, () => {
       expect(task5Func(a)).to.equal(a + 10);
     });
+
     it(`Verifying task5Func function returns correct sum if both a=${a} and b=${b} provided`, () => {
       expect(task5Func(a, b)).to.equal(a + b);
     });
@@ -98,41 +101,44 @@ describe('Unit 3 - Easy - Functions:', () => {
         firstName: 'THIS_IS_MY_NAME',
         lastName: 'THIS_IS_MY_LASTNAME',
       };
+
       expect(task6Func(object)).to.equal(
         object.firstName + ' ' + object.lastName,
       );
     });
   });
 
-  describe('Task 7 - return object', () => {
+  describe('Task 7 - Return object', () => {
     it('Verifying task7Func function returns correct object', () => {
       const object = {
         firstName: 'THIS_IS_MY_NAME',
         lastName: 'THIS_IS_MY_LASTNAME',
         age: 789,
       };
-      expect(
-        task7Func(object.firstName, object.lastName, object.age),
-      ).to.deep.equal(object);
+
+      expect(task7Func(object.firstName, object.lastName, object.age)).to.deep.equal(object);
     });
+
     it('Verifying task7Func function returns correct object if nothing was passed to it', () => {
       const object = {
         firstName: '',
         lastName: '',
         age: 0,
       };
+
       expect(task7Func()).to.deep.equal(object);
     });
   });
 
-  describe('Task 8 - odd or even', () => {
+  describe('Task 8 - Odd or even', () => {
     const n = getRandomNum();
+
     it(`Verifying task8Func function returns correct value for number= ${n}`, () => {
       expect(task8Func(n)).to.deep.equal(!!(n % 2));
     });
   });
 
-  describe('Task 9 - shortest word', () => {
+  describe('Task 9 - Shortest word', () => {
     [
       { arr: ['one', 'two', 'three'], exp: 'one' },
       { arr: ['one', 'two', 'three', 'x'], exp: 'x' },
@@ -143,16 +149,18 @@ describe('Unit 3 - Easy - Functions:', () => {
     });
   });
 
-  describe('Task 10 - total distance', () => {
+  describe('Task 10 - Total distance', () => {
     it('Verifying task10Func function returns correct distance', () => {
       const obj = _.range(1, 5).map(() => ({ distance: _.random(1000) }));
+
       expect(task10Func(obj)).to.equal(_.sum(obj.map((el) => el.distance)));
     });
   });
 
-  describe('Task 11 - callback', () => {
+  describe('Task 11 - Callback', () => {
     it('Verifying task11Func function returns correct string', () => {
       const text = chance.sentence();
+
       let myFunc = () => {
         return text;
       };
@@ -160,69 +168,80 @@ describe('Unit 3 - Easy - Functions:', () => {
       expect(task11Func(myFunc)).to.equal(`Callback result = ${text}`);
     });
   });
-});
 
-describe('Unit 3 - Normal - Functions:', () => {
-  describe('Task 12 - rest parameter', () => {
-    it('Verifying task12Func function returns correct object', () => {
-      expect(task12Func(1, 2, 3, 4)).to.deep.equal({
-        paramsNumber: 4,
-        firstParam: 1,
+  describe('Task 12 - addNumbers', function () {
+    it('should correctly add two numbers', function () {
+      addNumbers(2, 3, function (sum) {
+        expect(sum).to.equal(5);
+      });
+    });
+
+    it('should correctly handle negative numbers', function () {
+      addNumbers(-5, 10, function (sum) {
+        expect(sum).to.equal(5);
+      });
+    });
+
+    it('should correctly handle zero as an input', function () {
+      addNumbers(0, 7, function (sum) {
+        expect(sum).to.equal(7);
       });
     });
   });
 
-  describe('Task 13 - google', () => {
-    it('Verifying task13Func returns "goooooogle" if passing 6', () =>
-      expect(task13Func(6)).to.equal('goooooogle'));
-    it('Verifying task13Func returns "gooogle" if passing 3', () =>
-      expect(task13Func(3)).to.equal('gooogle'));
-  });
-});
+  describe('Task 13 - calculateSum', function () {
+    const sumCalc = (arr) => {
+      return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    };
 
-describe('Unit 3 - Hardcore - Functions:', () => {
-  describe('Task 14 - methods inside the given object', () => {
-    it('Verifying task14Object can print object keys', () => {
-      const expectedKeys = [
-        'name',
-        'lastName',
-        'age',
-        'friend',
-        'keys',
-        'call',
-      ];
-      const consoleLogSpy = sinon.spy(console, 'log');
-      task14Object.keys();
-      consoleLogSpy.restore();
-      const calls = consoleLogSpy.getCalls().map((call) => call.args[0]);
-      expect(calls).to.deep.equal(expectedKeys);
+    it('should calculate the sum correctly', () => {
+      const arr = chance.unique(chance.integer, 5, { min: 0, max: 100 });
+      let sum = 0;
+
+      // Mocking the callback to calculate the sum
+      const cb = (result) => {
+        sum = result;
+      };
+
+      calculateSum(arr, cb);
+
+      expect(sum).to.equal(
+        sumCalc(arr),
+        `Sum is not correct if array is [${arr.join(', ')}]`,
+      ); // The sum of [1, 2, 3, 4, 5] is 15
     });
 
-    it('Verifying task14Object can return the string', () => {
-      expect(task14Object.call()).to.equal(
-        'My name is ' +
-          task14Object.name +
-          ' ' +
-          task14Object.lastName +
-          ', and I am ' +
-          task14Object.age +
-          ' years old. My best friend is a ' +
-          task14Object.friend,
-      );
-    });
-  });
+    it('should handle an empty array', () => {
+      const arr = [];
+      let sum;
 
-  describe('Task 15 - Final Price with discount', () => {
-    [
-      { discount: 10, price: 100 },
-      { discount: 15, price: 200 },
-      { discount: 25, price: 800 },
-    ].forEach((el) => {
-      it(`Verifying task15Func calculates correct price if price=${el.price} and discount=${el.discount}`, () => {
-        expect(task15Func(el.discount)(el.price)).to.equal(
-          el.price - el.price * (el.discount / 100),
-        );
-      });
+      const cb = (result) => {
+        if (!sum) {
+          sum = 0;
+        }
+        sum = result;
+      };
+
+      calculateSum(arr, cb);
+
+      expect(sum).to.equal(0); // The sum of an empty array should be 0
+    });
+
+    it('should correctly handle negative numbers', function () {
+      const arr = chance.unique(chance.integer, 5, { min: -100, max: 0 });
+      let sum = 0;
+
+      // Mocking the callback to calculate the sum
+      const cb = (result) => {
+        sum = result;
+      };
+
+      calculateSum(arr, cb);
+
+      expect(sum).to.equal(
+        sumCalc(arr),
+        `Sum is not correct if array is [${arr.join(', ')}]`,
+      ); // The sum of [1, 2, 3, 4, 5] is 15
     });
   });
 });

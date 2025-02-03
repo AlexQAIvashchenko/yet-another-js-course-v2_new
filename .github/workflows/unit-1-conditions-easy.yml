@@ -1,0 +1,15 @@
+name: Test for Unit 1 - Conditions - Easy
+
+run-name: Running tests for Unit 1 - Conditions - Easy
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-1/1-mandatory-easy/2_conditions_mandatory.js'
+jobs:
+  test-unit-1-conditions-easy:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit1:conditions:easy'
