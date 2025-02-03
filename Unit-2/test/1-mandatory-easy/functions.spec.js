@@ -1,6 +1,5 @@
 const { expect } = require('chai');
 const _ = require('lodash');
-const sinon = require('sinon');
 const Chance = require('chance');
 const chance = new Chance();
 
@@ -19,7 +18,6 @@ try {
     task11Func,
     addNumbers,
     calculateSum,
-    countdown,
   } = require('../../1-mandatory-easy/functions'));
 } catch (err) {
   console.error(
@@ -244,51 +242,6 @@ describe('Unit 2 - Mandatory - Functions:', () => {
         sumCalc(arr),
         `Sum is not correct if array is [${arr.join(', ')}]`,
       ); // The sum of [1, 2, 3, 4, 5] is 15
-    });
-  });
-
-  describe('Task 14 - countdown', function () {
-    it('should call the callback function when duration is less than 0', function () {
-      const cb = sinon.spy();
-
-      countdown(-1, cb);
-      expect(cb.calledOnce, 'Callback was called more than 1 time').to.be.true;
-    });
-
-    it('should call the callback function when duration is equal to 0', function () {
-      const cb = sinon.spy();
-
-      countdown(0, cb);
-      expect(cb.calledOnce, 'Callback was called more than 1 time').to.be.true;
-    });
-
-    it('should print the numbers from 0 to 3 if duration is 3', function () {
-      const cb = sinon.spy();
-      const consoleSpy = sinon.spy(console, 'log');
-
-      countdown(3, cb);
-      expect(
-        consoleSpy.callCount,
-        'Number of console.logs is not correct',
-      ).to.equal(4);
-      expect(
-        consoleSpy.firstCall.calledWithExactly(0),
-        'First console.log is not correct',
-      ).to.be.true;
-      expect(
-        consoleSpy.secondCall.calledWithExactly(1),
-        'Second console.log is not correct',
-      ).to.be.true;
-      expect(
-        consoleSpy.thirdCall.calledWithExactly(2),
-        'Third console.log is not correct',
-      ).to.be.true;
-      expect(
-        consoleSpy.lastCall.calledWithExactly(3),
-        'Last console.log is not correct',
-      ).to.be.true;
-
-      consoleSpy.restore();
     });
   });
 });

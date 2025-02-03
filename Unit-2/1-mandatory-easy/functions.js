@@ -193,32 +193,6 @@ let addNumbers;
 // enter your code below
 let calculateSum;
 
-/**
- * Level - Easy
- * Task - 14
- * Create a function 'countdown' that takes a duration and a callback function as parameters.
- * Inside the function, console.log number that starts from 0
- * and increments by one until it reaches the specified duration.
- * After the countdown finishes, return invocation of the callback function.
- *
- * @example
- * usage of the created function should be like:
- *      countdown(10, someFunc);
- * The output of the code should be:
- *      0
- *      1
- *      ...
- *      {duration}
- *      Callback invoked!
- *
- * if someFunc = () => console.log("Callback invoked!");
- */
-
-const someFunc = () => console.log('Callback invoked!');
-
-// enter your code below
-let countdown;
-
 module.exports = {
   task1Func,
   task2Func,
@@ -233,5 +207,4 @@ module.exports = {
   task11Func,
   addNumbers,
   calculateSum,
-  countdown,
 };
