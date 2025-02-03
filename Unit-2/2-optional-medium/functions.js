@@ -46,7 +46,7 @@ const task2Func = (/** add function parameters */) => {
  *
  * Example:
  * task3Func(6, 7) should return true (both > 5)
- * task3Func(4, 5) should return true (both <= 5)
+ * task3Func(4, 5) should return `"fizz"` (both <= 5)
  * task3Func(6, 4) should return false (one > 5, one <= 5)
  */
 
