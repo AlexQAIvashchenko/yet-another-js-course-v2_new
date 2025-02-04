@@ -1,0 +1,15 @@
+name: Test for Unit 5 - Callbacks - Medium
+
+run-name: Running tests for Unit 5 - Callbacks - Medium
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-5/2-optional-medium/callbacks.js'
+jobs:
+  test-unit-5-callbacks-medium:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit5:callbacks:medium'

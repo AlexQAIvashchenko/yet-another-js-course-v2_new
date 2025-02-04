@@ -27,8 +27,10 @@
     "test:unit4:objects:easy": "mocha Unit-4/test/1-mandatory-easy/objects.spec.js",
     "test:unit4:objects:medium": "mocha Unit-4/test/2-optional-medium/objects.spec.js",
     "test:unit4:classes:easy": "mocha Unit-4/test/1-mandatory-easy/classes.spec.js",
-    "test:unit6": "mocha Unit-6/test/**/*.spec.js",
-    "test:unit6:callbacks": "mocha Unit-6/test/callbacks.spec.js",
+    "test:unit5": "mocha Unit-5/test/**/*.spec.js",
+    "test:unit5:callbacks:easy": "mocha Unit-5/test/1-mandatory-easy/callbacks.spec.js",
+    "test:unit5:callbacks:medium": "mocha Unit-5/test/2-optional-medium/callbacks.spec.js",
+    "test:unit5:callbacks:hard": "mocha Unit-5/test/3-optional-hard/callbacks.spec.js",
     "test:unit7": "mocha Unit-7/test/**/*.spec.js",
     "test:unit7:promises": "mocha Unit-7/test/promises.spec.js",
     "test:unit7:async": "mocha Unit-7/test/asyncAwait.spec.js"
