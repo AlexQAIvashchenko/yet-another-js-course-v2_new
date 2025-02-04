@@ -1,6 +1,6 @@
-name: Test for Unit 4 - Classes - Medium
+name: Test for Unit 4 - Classes - Easy
 
-run-name: Running tests for Unit 4 - Classes - Medium
+run-name: Running tests for Unit 4 - Classes - Easy
 
 on:
   pull_request:
