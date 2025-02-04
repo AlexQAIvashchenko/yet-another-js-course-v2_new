@@ -46,17 +46,6 @@ let figure; // enter your code here
 
 let square; // enter your code here
 
-/**
- * Additional tasks from codewars.com:
- *
- * https://www.codewars.com/kata/597c684822bc9388f600010f
- * https://www.codewars.com/kata/547274e24481cfc469000416
- * https://www.codewars.com/kata/55a14aa4817efe41c20000bc
- * https://www.codewars.com/kata/53f0f358b9cb376eca001079
- * https://www.codewars.com/kata/56f935002e6c0d55fa000d92
- * https://www.codewars.com/kata/577bd8d4ae2807c64b00045b
- */
-
 module.exports = {
   figure,
   square,
