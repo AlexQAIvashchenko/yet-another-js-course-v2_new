@@ -1,0 +1,15 @@
+name: Test for Unit 3 - Strings - Easy
+
+run-name: Running tests for Unit 3 - Strings - Easy
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-3/1-mandatory-easy/1_strings.js'
+jobs:
+  test-unit-3-strings-easy:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit3:strings:easy'
