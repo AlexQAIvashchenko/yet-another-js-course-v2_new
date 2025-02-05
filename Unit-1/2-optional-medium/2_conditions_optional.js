@@ -50,10 +50,11 @@ let task2;
  */
 
 const totalPrice = 420;
+let task3;
 
 // enter your code here
 
-let task3;
+
 
 /**
  * Level - Normal
