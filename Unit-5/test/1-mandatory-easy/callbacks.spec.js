@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const sinon = require('sinon');
-const { delayedGreeting } = require('../../1-mandatory-easy/callbacks');
+const { delayedGreeting } = require('../../1-mandatory-easy/1_callbacks');
 
 describe('Unit 5 - Mandatory - Callbacks:', () => {
   describe('Task 1 - delayedGreeting', function () {

@@ -1,0 +1,15 @@
+name: Test for Unit 5 - Async Await - Easy
+
+run-name: Running tests for Unit 5 - Async Await - Easy
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-5/1-mandatory-easy/3_asyncAwait.js'
+jobs:
+  test-unit-5-async-await-easy:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit5:async:easy'

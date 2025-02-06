@@ -2,7 +2,7 @@
 
 ## Tasks changes
 
-[ ] move tasks from callbacks.js (that not related to async programming) to functions and async callbacks to promises
+[x] move tasks from callbacks.js (that not related to async programming) to functions and async callbacks to promises
 
 [ ] new class tasks
 
@@ -24,14 +24,14 @@
 
 ## Tests and scripts
 
-[ ] fix scripts
+[x] fix scripts
 
-[ ] split tasks into 3 category in each file - mandatory/easy, medium/optional & expert/optional
+[x] split tasks into 3 category in each file - mandatory/easy, medium/optional & expert/optional
 
-[ ] mandatory tests should be launched all at once and show error
+[x] mandatory tests should be launched all at once and show error
 
 [ ] optional tests should not launched in case task variable is undefined or something similar that states it's not started
 
-[ ] update package json scripts to be launched for corespondent task files
+[x] update package json scripts to be launched for corespondent task files
 
-[ ] fix workflows to be launched on changes in corespondent files
+[x] fix workflows to be launched on changes in corespondent files

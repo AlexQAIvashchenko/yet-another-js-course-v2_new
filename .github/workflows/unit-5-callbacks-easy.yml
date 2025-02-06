@@ -7,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      - 'Unit-5/1-mandatory-easy/callbacks.js'
+      - 'Unit-5/1-mandatory-easy/1_callbacks.js'
 jobs:
   test-unit-5-callbacks-easy:
     uses: ./.github/workflows/reusable.yml

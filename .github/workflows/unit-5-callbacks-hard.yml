@@ -7,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      - 'Unit-5/3-optional-hard/callbacks.js'
+      - 'Unit-5/3-optional-hard/1_callbacks.js'
 jobs:
   test-unit-5-callbacks-hard:
     uses: ./.github/workflows/reusable.yml

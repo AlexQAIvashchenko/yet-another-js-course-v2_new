@@ -31,9 +31,10 @@
     "test:unit5:callbacks:easy": "mocha Unit-5/test/1-mandatory-easy/callbacks.spec.js",
     "test:unit5:callbacks:medium": "mocha Unit-5/test/2-optional-medium/callbacks.spec.js",
     "test:unit5:callbacks:hard": "mocha Unit-5/test/3-optional-hard/callbacks.spec.js",
-    "test:unit7": "mocha Unit-7/test/**/*.spec.js",
-    "test:unit7:promises": "mocha Unit-7/test/promises.spec.js",
-    "test:unit7:async": "mocha Unit-7/test/asyncAwait.spec.js"
+    "test:unit5:promises:easy": "mocha Unit-5/test/1-mandatory-easy/promises.spec.js",
+    "test:unit5:promises:medium": "mocha Unit-5/test/2-optional-medium/promises.spec.js",
+    "test:unit5:async:easy": "mocha Unit-5/test/1-mandatory-easy/asyncAwait.spec.js",
+    "test:unit5:async:medium": "mocha Unit-5/test/2-optional-medium/asyncAwait.spec.js"
   },
   "repository": {
     "type": "git",

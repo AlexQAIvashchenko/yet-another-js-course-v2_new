@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const sinon = require('sinon');
-const { countdown } = require('../../3-optional-hard/callbacks');
+const { countdown } = require('../../3-optional-hard/1_callbacks');
 
 describe('Unit 5 - Optional - Hard - Callbacks:', () => {
   describe('Task 1 - countdown', function () {

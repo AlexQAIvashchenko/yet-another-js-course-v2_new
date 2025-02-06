@@ -1,0 +1,15 @@
+name: Test for Unit 5 - Promises - Easy
+
+run-name: Running tests for Unit 5 - Promises - Easy
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Unit-5/1-mandatory-easy/2_promises.js'
+jobs:
+  test-unit-5-promises-easy:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test:unit5:promises:easy'
