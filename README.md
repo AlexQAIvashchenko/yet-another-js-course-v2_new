@@ -1,10 +1,10 @@
-# yet_another_js_course
+# yet_another_js_course_v2
 JS for QA/AQA course materials
 
 ## Requirements
 
 * You should have any git client installed
-* NodeJS 14 or higher
+* NodeJS 21 or higher
 * VSCode
 
 ## Setup
@@ -14,12 +14,11 @@ JS for QA/AQA course materials
 ```
 You should see the text in case of success:
 ``You've succeeded to set up everything!
-Now it's time to make your first Commit and Push.
-Follow the instructions you have to do that.
+Now it's time to write your first code.
 ``
 
 ## Verifying your code
 ```
- npm run test:<unit_number>
+ npm run test:<unit_task>
 ```
-To get specific unit script e.g. `test:unit2:conditions` please check package.json file, section _scripts_
+To get specific unit script e.g. `test:unit1:conditions:medium` please check package.json file, section _scripts_

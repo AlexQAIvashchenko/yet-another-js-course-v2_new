@@ -5,5 +5,4 @@ describe('Unit-0', () => {
 });
 
 console.log('You\'ve succeeded to set up everything!');
-console.log('Now it\'s time to make your first Commit and Push.');
-console.log('Follow the instructions you have to do that.');
+console.log('Now it\'s time to write your first code.');
