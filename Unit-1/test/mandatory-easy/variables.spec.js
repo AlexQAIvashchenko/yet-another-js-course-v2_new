@@ -66,22 +66,28 @@ describe('Unit 1 - Mandatory - Variables and Data Types:', () => {
     expect(vars.myText2).to.equal(`${vars.myText} is ${vars.myNum2}`);
   });
 
-  it('Task 13 - "myObj" variable should be created', () => {
-    expect(typeof vars.myObj).to.equal('object');
-    expect(vars.myObj.firstName).to.equal('John');
-    expect(vars.myObj.lastName).to.equal('Dou');
-    expect(vars.myObj.fullName).to.equal('John Dou');
-  });
-
-  it('Task 14 - "myBool2" variable should be created', () => {
+  it('Task 13 - "myBool2" variable should be created', () => {
     expect(vars.myBool2).to.equal(vars.myNum == vars.myNum2);
   });
 
-  it('Task 15 - "myBool3" variable should be created', () => {
+  it('Task 14 - "myBool3" variable should be created', () => {
     expect(vars.myBool3).to.equal(vars.myNum2 === '37');
   });
 
-  it('Task 16 - "myUndefined2" variable should be created', () => {
+  it('Task 15 - "myUndefined2" variable should be created', () => {
     expect(vars.myUndefined2).to.equal(undefined);
+  });
+
+  it('Task 16 - "myObj" variable should be created and have firstName', () => {
+    expect(typeof vars.myObj).to.equal('object');
+    expect(vars.myObj.firstName).to.equal('John');
+  });
+
+  it('Task 17 - "myObj" variable should be created and have lastName', () => {
+    expect(vars.myObj.lastName).to.equal('Dou');
+  });
+
+  it('Task 18 - "myObj" variable should be created and have fullName', () => {
+    expect(vars.myObj.fullName).to.equal('John Dou');
   });
 });
