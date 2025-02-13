@@ -79,6 +79,24 @@ const task4Object = {
 /**
  * Level - Normal
  * Task - 5
+ * Implement a function calculateSum that takes an array of numbers and a callback function as parameters.
+ * Inside the function, calculate the sum of the numbers in the array.
+ * Once the sum is calculated, invoke the callback function with the resulting sum.
+ *
+ * @example
+ * usage of the created function should be like:
+ *      calculateSum([1, 2, 3, 4], someFuncWithParam)
+ * The output of the above code is ===> "Result = 10"
+ *
+ * if someFuncWithParam = (resultOfTheAsyncFunc) => console.log(`Result = ${resultOfTheAsyncFunc}`);
+ */
+
+// enter your code below
+let calculateSum;
+
+/**
+ * Level - Normal
+ * Task - 6
  * Create a function 'countdown' that takes a duration and a callback function as parameters.
  * Inside the function, console.log number that starts from 0
  * and increments by one until it reaches the specified duration.
@@ -107,5 +125,6 @@ module.exports = {
   task2Func,
   task3Func,
   task4Object,
+  calculateSum,
   countdown,
 };

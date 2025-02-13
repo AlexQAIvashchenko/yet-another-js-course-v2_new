@@ -16,7 +16,7 @@ const chance = new Chance();
  * Level - Easy
  * Task - 1
  * Create a function task1Func which will always return true
- * Use function definition (also called a function declaration, or function statement)
+ * NOTE: Use function definition (also called a function declaration, or function statement)
  */
 
 // enter your code here
@@ -26,7 +26,8 @@ const chance = new Chance();
  * Task - 2
  * Create a variable task2Func which will contain a function
  * which will take year of birth as a parameter and returns calculated age based on current year
- * Use function expression
+ * NOTE1:Use function expression
+ * NOTE2: you can hardcode the year value OR you can google how to get current year in JS
  */
 
 // enter your code here
@@ -35,9 +36,10 @@ const chance = new Chance();
  * Level - Easy
  * Task - 3
  * Create a variable task3Func which will contain a function
- * which will take parameter gender as a number (where 1 stands for woman, 2 is man and 0 is other)
- * and returns text ee.g. "My gender is woman"
- * Use function expression with arrow function notation
+ * which will take parameter gender as a number 1 or 2 or 0
+ * (where 1 stands for "woman", 2 for "man" and 0 for "other")
+ * and returns text e.g. "My gender is woman"
+ * NOTE: Use function expression with arrow function notation
  */
 
 // enter your code here
@@ -68,7 +70,7 @@ function task5Func(/** add function parameters */) {
  * Level - Easy
  * Task - 6
  * Create a function task6Func which will get an object, e.g. {firstName: "Jack", lastName: "London"}
- * and returns a string firstName plus lastName, separated by space
+ * and returns a string of the firstName plus lastName, separated by space
  */
 
 function task6Func(/** add function parameters */) {
@@ -78,7 +80,7 @@ function task6Func(/** add function parameters */) {
 /**
  * Level - Easy
  * Task - 7
- * Create a function task7Func that returns an object based on the given information
+ * Create a function task7Func that returns an object based on the given params
  * (params may be null, please use default ones (empty strings and 0 for age))
  *
  * @example
@@ -109,10 +111,10 @@ function task8Func(/** add function parameters */) {
 /**
  * Level - Easy
  * Task - 9
- * Create a function task9Func which returns the first shortest of the words in the given array
+ * Create a function task9Func which returns the first shortest word from the given array of words
  *
  * @example
- * task9Func(["ten", "two", "four"]) // => ten
+ * task9Func(["eleven", "ten", "two", "four"]) // => ten
  */
 
 function task9Func(/** add function parameters */) {
@@ -122,7 +124,7 @@ function task9Func(/** add function parameters */) {
 /**
  * Level - Easy
  * Task - 10
- * Create a function task10Func which calculates total distance traveled
+ * Create a function task10Func which calculates total distance
  * based on an array of objects with field distance and direction
  * e.g [ {direction: "Kiyv - Krakow", distance: 879 }, { direction: "Kiyv - Tokyo", distance: 8193 } ]
  */
@@ -136,10 +138,10 @@ function task10Func(/** add function parameters */) {
  * Task - 11
  * Callback
  * Create a function task11Func which will take another function as an argument
- * and returns result of execution of that another function in string format
+ * and returns string "Callback result = " plus the result of execution of that another function in string format
  * NOTE: you can use `someFunc1` or `someFunc2` for testing purposes
  * @example
- * if callBackFunction (e.g. `someFunc1`) returns "THIS IS THE RESULT"
+ * if callbackFunction (e.g. `someFunc1`) returns "THIS IS THE RESULT"
  * than task11Func should return "Callback result = THIS IS THE RESULT"
  */
 
@@ -175,24 +177,6 @@ const someFuncWithParam = (resultOfTheCallbackFunc) => {
 // enter your code below
 let addNumbers;
 
-/**
- * Level - Easy
- * Task - 13
- * Implement a function calculateSum that takes an array of numbers and a callback function as parameters.
- * Inside the function, calculate the sum of the numbers in the array.
- * Once the sum is calculated, invoke the callback function with the resulting sum.
- *
- * @example
- * usage of the created function should be like:
- *      calculateSum([1, 2, 3, 4], someFuncWithParam)
- * The output of the above code is ===> "Result = 10"
- *
- * if someFuncWithParam = (resultOfTheAsyncFunc) => console.log(`Result = ${resultOfTheAsyncFunc}`);
- */
-
-// enter your code below
-let calculateSum;
-
 module.exports = {
   task1Func,
   task2Func,
@@ -206,5 +190,4 @@ module.exports = {
   task10Func,
   task11Func,
   addNumbers,
-  calculateSum,
 };

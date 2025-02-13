@@ -7,6 +7,7 @@ try {
     task2Func,
     task3Func,
     task4Object,
+    calculateSum,
     countdown,
   } = require('../../2-optional-medium/functions'));
 } catch (err) {
@@ -92,7 +93,63 @@ describe('Unit 3 - Optional - Medium - Functions:', () => {
     });
   });
 
-  describe('Task 5 - countdown', function () {
+  describe('Task 5 - calculateSum', function () {
+    const sumCalc = (arr) => {
+      return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    };
+
+    it('should calculate the sum correctly', () => {
+      const arr = chance.unique(chance.integer, 5, { min: 0, max: 100 });
+      let sum = 0;
+
+      // Mocking the callback to calculate the sum
+      const cb = (result) => {
+        sum = result;
+      };
+
+      calculateSum(arr, cb);
+
+      expect(sum).to.equal(
+        sumCalc(arr),
+        `Sum is not correct if array is [${arr.join(', ')}]`,
+      ); // The sum of [1, 2, 3, 4, 5] is 15
+    });
+
+    it('should handle an empty array', () => {
+      const arr = [];
+      let sum;
+
+      const cb = (result) => {
+        if (!sum) {
+          sum = 0;
+        }
+        sum = result;
+      };
+
+      calculateSum(arr, cb);
+
+      expect(sum).to.equal(0); // The sum of an empty array should be 0
+    });
+
+    it('should correctly handle negative numbers', function () {
+      const arr = chance.unique(chance.integer, 5, { min: -100, max: 0 });
+      let sum = 0;
+
+      // Mocking the callback to calculate the sum
+      const cb = (result) => {
+        sum = result;
+      };
+
+      calculateSum(arr, cb);
+
+      expect(sum).to.equal(
+        sumCalc(arr),
+        `Sum is not correct if array is [${arr.join(', ')}]`,
+      ); // The sum of [1, 2, 3, 4, 5] is 15
+    });
+  });
+
+  describe('Task 6 - countdown', function () {
     it('should call the callback function when duration is less than 0', function () {
       const cb = sinon.spy();
 
