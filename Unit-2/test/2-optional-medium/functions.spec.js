@@ -1,5 +1,7 @@
 const { expect } = require('chai');
 const sinon = require('sinon');
+const Chance = require('chance');
+const chance = new Chance();
 
 try {
   ({
