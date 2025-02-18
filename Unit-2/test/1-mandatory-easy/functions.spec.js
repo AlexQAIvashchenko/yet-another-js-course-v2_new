@@ -67,7 +67,7 @@ describe('Unit 2 - Mandatory - Functions:', () => {
       });
     });
 
-    it('Verifying task2Func function is implemented using "function expression"', () => {
+    it('Verifying task3Func function is implemented using "function expression"', () => {
       expect(removeLinesAndSpaces(task3Func.toString())).to.contain(')=>{');
     });
   });
