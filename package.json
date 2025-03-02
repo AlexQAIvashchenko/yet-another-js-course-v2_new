@@ -7,6 +7,7 @@
     "eslint-fix": "eslint . --fix",
     "test": "mocha Unit*/**/*.spec.js",
     "test:unit0": "mocha Unit-0/*.spec.js",
+
     "test:unit1": "mocha Unit-1/test/**/*.spec.js",
     "test:unit1:variables:easy": "mocha Unit-1/test/mandatory-easy/variables.spec.js",
     "test:unit1:variables:medium": "mocha Unit-1/test/optional-medium/variables.spec.js",
@@ -14,19 +15,27 @@
     "test:unit1:conditions:medium": "mocha Unit-1/test/optional-medium/conditions.spec.js",
     "test:unit1:loops:easy": "mocha Unit-1/test/mandatory-easy/loops.spec.js",
     "test:unit1:loops:medium": "mocha Unit-1/test/optional-medium/loops.spec.js",
+
     "test:unit2": "mocha Unit-2/test/**/*.spec.js",
     "test:unit2:functions:easy": "mocha Unit-2/test/1-mandatory-easy/functions.spec.js",
     "test:unit2:functions:medium": "mocha Unit-2/test/2-optional-medium/functions.spec.js",
     "test:unit2:functions:hard": "mocha Unit-2/test/3-optional-hard/functions.spec.js",
+
     "test:unit3": "mocha Unit-3/test/**/*.spec.js",
     "test:unit3:strings:easy": "mocha Unit-3/test/mandatory-easy/strings.spec.js",
     "test:unit3:arrays:easy": "mocha Unit-3/test/mandatory-easy/arrays.spec.js",
     "test:unit3:strings:medium": "mocha Unit-3/test/optional-medium/strings.spec.js",
     "test:unit3:arrays:medium": "mocha Unit-3/test/optional-medium/arrays.spec.js",
+
     "test:unit4": "mocha Unit-4/test/**/*.spec.js",
-    "test:unit4:objects:easy": "mocha Unit-4/test/1-mandatory-easy/objects.spec.js",
-    "test:unit4:objects:medium": "mocha Unit-4/test/2-optional-medium/objects.spec.js",
-    "test:unit4:classes:easy": "mocha Unit-4/test/1-mandatory-easy/classes.spec.js",
+    "test:unit4:easy:objects": "mocha Unit-4/test/1-mandatory-easy/objects.spec.js",
+    "test:unit4:easy:classes": "mocha Unit-4/test/1-mandatory-easy/classes.spec.js",
+    "test:unit4:medium:1": "mocha Unit-4/test/2-optional-medium/1objects.spec.js",
+    "test:unit4:medium:2": "mocha Unit-4/test/2-optional-medium/2classUser.spec.js",
+    "test:unit4:medium:3": "mocha Unit-4/test/2-optional-medium/3objectsUser.spec.js",
+    "test:unit4:medium:4": "mocha Unit-4/test/2-optional-medium/4classGuestRegistered.spec.js",
+    "test:unit4:medium:5": "mocha Unit-4/test/2-optional-medium/5objectsGuestRegistered.spec.js",
+
     "test:unit5": "mocha Unit-5/test/**/*.spec.js",
     "test:unit5:callbacks:easy": "mocha Unit-5/test/1-mandatory-easy/callbacks.spec.js",
     "test:unit5:callbacks:medium": "mocha Unit-5/test/2-optional-medium/callbacks.spec.js",

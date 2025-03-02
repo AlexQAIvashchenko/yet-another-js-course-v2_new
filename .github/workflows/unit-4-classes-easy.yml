@@ -12,4 +12,4 @@ jobs:
   test-unit-4-classes-easy:
     uses: ./.github/workflows/reusable.yml
     with:
-      npm-command: 'test:unit4:classes:easy'
+      npm-command: 'test:unit4:easy:classes'

@@ -12,4 +12,4 @@ jobs:
   test-unit-4-objects-easy:
     uses: ./.github/workflows/reusable.yml
     with:
-      npm-command: 'test:unit4:objects:easy'
+      npm-command: 'test:unit4:easy:objects'

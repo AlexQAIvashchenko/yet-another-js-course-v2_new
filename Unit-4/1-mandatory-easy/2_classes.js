@@ -9,7 +9,7 @@
 
 /**
  * Level - Easy
- * Task - 1 - Part 1 (verification will work only once Part 2 is implemented)
+ * Task - 1 - Part 1
  * Implement class Figure with:
  * 1) properties name and numberOfPoints
  * 2) constructor should get numberOfPoints and name
@@ -17,7 +17,9 @@
  */
 
 // enter your code here
-class Figure {}
+class Figure {
+
+}
 
 /**
  * Level - Easy
@@ -29,7 +31,7 @@ let figure; // enter your code here
 
 /**
  * Level - Easy
- * Task - 2 - Part 1 (verification will work only once Part 2 is implemented)
+ * Task - 2 - Part 1
  * Implement class Square that extends Figure with:
  * 1) property sideLength and figureArea
  * 2) constructor should additionally get sideLength and calculate figureArea
@@ -37,6 +39,9 @@ let figure; // enter your code here
  */
 
 // enter your code here
+class Square {
+
+}
 
 /**
  * Level - Easy
@@ -50,4 +55,5 @@ module.exports = {
   figure,
   square,
   Figure,
+  Square,
 };

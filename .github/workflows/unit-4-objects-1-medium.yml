@@ -1,6 +1,6 @@
-name: Test for Unit 4 - Objects - Medium
+name: Test for Unit 4 - Objects - 1 - Medium
 
-run-name: Running tests for Unit 4 - Objects - Medium
+run-name: Running tests for Unit 4 - Objects - 1 - Medium
 
 on:
   pull_request:
@@ -12,4 +12,4 @@ jobs:
   test-unit-4-objects-medium:
     uses: ./.github/workflows/reusable.yml
     with:
-      npm-command: 'test:unit4:objects:medium'
+      npm-command: 'test:unit4:medium:1'
