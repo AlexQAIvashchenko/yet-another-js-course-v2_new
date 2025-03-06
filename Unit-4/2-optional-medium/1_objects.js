@@ -1,7 +1,7 @@
 /**
  * Level - Normal
  * Task - 1
- * Create a task4Func which will return the list of object properties
+ * Create a task1Func which will return the list of object properties
  * if theirs values are Numbers
  */
 
