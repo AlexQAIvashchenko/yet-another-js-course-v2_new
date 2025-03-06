@@ -36,10 +36,22 @@ describe('Unit 4 - Optional - Classes: Objects User', function () {
     });
 
     it('should have valid session timestamps', function () {
-      expect(user2.sessions[0], 'user2 sessions first element should have timestamp').to.be.a('number');
-      expect(user2.sessions[0], 'user2 sessions first element should be a timestamp').to.be.closeTo(Date.now(), 1000);
-      expect(user2.sessions[1], 'user2 sessions second element should have timestamp').to.be.a('number');
-      expect(user2.sessions[1], 'user2 sessions second element should be a timestamp').to.be.closeTo(Date.now(), 1000);
+      expect(
+        user2.sessions[0],
+        'user2 sessions first element should have timestamp',
+      ).to.be.a('number');
+      expect(
+        user2.sessions[0],
+        'user2 sessions first element should be a timestamp',
+      ).to.be.closeTo(Date.now(), 1000);
+      expect(
+        user2.sessions[1],
+        'user2 sessions second element should have timestamp',
+      ).to.be.a('number');
+      expect(
+        user2.sessions[1],
+        'user2 sessions second element should be a timestamp',
+      ).to.be.closeTo(Date.now(), 1000);
     });
   });
 });

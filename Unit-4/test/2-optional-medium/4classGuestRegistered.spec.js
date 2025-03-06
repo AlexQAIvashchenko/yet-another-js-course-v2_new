@@ -11,14 +11,19 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
 
     it('should have role "guest"', function () {
       const guest = new Guest();
-      expect(guest.globalRole, 'Guest object instance should have globalRole equal "guest"').to.equal('guest');
+      expect(
+        guest.globalRole,
+        'Guest object instance should have globalRole equal "guest"',
+      ).to.equal('guest');
     });
 
     it('should register a new RegisteredUser', function () {
       const guest = new Guest();
       const registeredUser = guest.register('John Doe', 'john@example.com', 'password123');
-      expect(registeredUser, 'guest user should be instance of RegisteredUser class if registered method was called')
-        .to.be.instanceOf(RegisteredUser);
+      expect(
+        registeredUser,
+        'guest user should be instance of RegisteredUser class if registered method was called',
+      ).to.be.instanceOf(RegisteredUser);
     });
   });
 
@@ -30,49 +35,76 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
 
     it('should have role "registered"', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
-      expect(registeredUser.globalRole, 'RegisteredUser object instance should have globalRole equal "registered"').to.equal('registered');
+      expect(
+        registeredUser.globalRole,
+        'RegisteredUser object instance should have globalRole equal "registered"',
+      ).to.equal('registered');
     });
 
     it('should have private properties name, email, isVerified, and password', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
-      expect(registeredUser.name, 'Name is not correct if "John Doe" was used for object creation').to.equal('John Doe');
-      expect(registeredUser.email, 'Email is not correct if "john@example.com" was used for object creation').to.equal('john@example.com');
-      expect(registeredUser.verifyEmail, 'verifyEmail should be a function').to.be.a('function');
-      expect(registeredUser.changePassword, 'changePassword should be a function').to.be.a('function');
+      expect(
+        registeredUser.name,
+        'Name is not correct if "John Doe" was used for object creation',
+      ).to.equal('John Doe');
+      expect(
+        registeredUser.email,
+        'Email is not correct if "john@example.com" was used for object creation',
+      ).to.equal('john@example.com');
+      expect(
+        registeredUser.verifyEmail,
+        'verifyEmail should be a function',
+      ).to.be.a('function');
+      expect(
+        registeredUser.changePassword,
+        'changePassword should be a function',
+      ).to.be.a('function');
     });
 
     it('should have function to remind password if email was verified', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
       registeredUser.verifyEmail();
-      expect(registeredUser.forgotPassword('john@example.com')).to.equal('Email with password was sent');
+      expect(
+        registeredUser.forgotPassword('john@example.com'),
+      ).to.equal('Email with password was sent');
     });
 
     it('should return "Email is not verified" if email is not verified', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
-      expect(registeredUser.forgotPassword('john@example.com')).to.equal('Email is not verified');
+      expect(
+        registeredUser.forgotPassword('john@example.com'),
+      ).to.equal('Email is not verified');
     });
 
     it('should return "No user with this email" if email does not match', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
       registeredUser.verifyEmail();
-      expect(registeredUser.forgotPassword('wrong@example.com')).to.equal('No user with this email');
+      expect(
+        registeredUser.forgotPassword('wrong@example.com'),
+      ).to.equal('No user with this email');
     });
 
     it('should have function to change password if old password matches', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
       registeredUser.verifyEmail();
-      expect(registeredUser.changePassword('password123', 'newpassword')).to.equal(true);
+      expect(
+        registeredUser.changePassword('password123', 'newpassword'),
+      ).to.equal(true);
     });
 
     it('should have function to change password and return "Invalid password" if old password does not match', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
       registeredUser.verifyEmail();
-      expect(registeredUser.changePassword('wrongpassword', 'newpassword')).to.equal('Invalid password');
+      expect(
+        registeredUser.changePassword('wrongpassword', 'newpassword'),
+      ).to.equal('Invalid password');
     });
 
     it('should have function to change password and return "Email is not verified" if email is not verified when changing password', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
-      expect(registeredUser.changePassword('password123', 'newpassword')).to.equal('Email is not verified');
+      expect(
+        registeredUser.changePassword('password123', 'newpassword'),
+      ).to.equal('Email is not verified');
     });
   });
 });

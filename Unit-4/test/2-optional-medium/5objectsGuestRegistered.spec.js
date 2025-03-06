@@ -42,7 +42,9 @@ describe('Unit 4 - Optional - Classes: Objects Guest and RegisteredUser', functi
     });
 
     it('should have verified email', function () {
-      expect(userRegistered.forgotPassword('doe_1992@gmail.com')).to.equal('Email with password was sent');
+      expect(
+        userRegistered.forgotPassword('doe_1992@gmail.com'),
+      ).to.equal('Email with password was sent');
     });
 
     it('should change password successfully', function () {
@@ -50,12 +52,16 @@ describe('Unit 4 - Optional - Classes: Objects Guest and RegisteredUser', functi
     });
 
     it('should return "Invalid password" if old password does not match', function () {
-      expect(userRegistered.changePassword('wrongpassword', 'newpassword')).to.equal('Invalid password');
+      expect(
+        userRegistered.changePassword('wrongpassword', 'newpassword'),
+      ).to.equal('Invalid password');
     });
 
     it('should return "Email is not verified" if email is not verified when changing password', function () {
       const unverifiedUser = new RegisteredUser('Jane Doe', 'jane@example.com', 'password123');
-      expect(unverifiedUser.changePassword('password123', 'newpassword')).to.equal('Email is not verified');
+      expect(
+        unverifiedUser.changePassword('password123', 'newpassword'),
+      ).to.equal('Email is not verified');
     });
   });
 });
