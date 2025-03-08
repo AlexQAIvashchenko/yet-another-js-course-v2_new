@@ -6,7 +6,7 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
   describe('Guest class', function () {
     it('should be an instance of User', function () {
       const guest = new Guest();
-      expect(guest, 'Guest class must extends User class').to.be.instanceOf(User);
+      expect(guest, 'Guest class must extend User class').to.be.instanceOf(User);
     });
 
     it('should have role "guest"', function () {
@@ -22,7 +22,7 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
       const registeredUser = guest.register('John Doe', 'john@example.com', 'password123');
       expect(
         registeredUser,
-        'guest user should be instance of RegisteredUser class if registered method was called',
+        'guest user should be an instance of RegisteredUser class if register method was called',
       ).to.be.instanceOf(RegisteredUser);
     });
   });
@@ -30,7 +30,7 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
   describe('RegisteredUser class', function () {
     it('should be an instance of User', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
-      expect(registeredUser, 'RegisteredUser class must extends User class').to.be.instanceOf(User);
+      expect(registeredUser, 'RegisteredUser class must extend User class').to.be.instanceOf(User);
     });
 
     it('should have role "registered"', function () {
@@ -51,14 +51,23 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
         registeredUser.email,
         'Email is not correct if "john@example.com" was used for object creation',
       ).to.equal('john@example.com');
-      expect(
-        registeredUser.verifyEmail,
-        'verifyEmail should be a function',
-      ).to.be.a('function');
-      expect(
-        registeredUser.changePassword,
-        'changePassword should be a function',
-      ).to.be.a('function');
+      expect(registeredUser.verifyEmail, 'verifyEmail should be a function').to.be.a('function');
+      expect(registeredUser.changePassword, 'changePassword should be a function').to.be.a('function');
+    });
+
+    it('should return correct name and email using getters', function () {
+      const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
+      expect(registeredUser.name).to.equal('John Doe');
+      expect(registeredUser.email).to.equal('john@example.com');
+    });
+
+    it('should not allow modifying name or email directly', function () {
+      const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
+      registeredUser.name = 'Hacker';
+      registeredUser.email = 'hacker@example.com';
+
+      expect(registeredUser.name).to.equal('John Doe');
+      expect(registeredUser.email).to.equal('john@example.com');
     });
 
     it('should have function to remind password if email was verified', function () {
@@ -71,9 +80,7 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
 
     it('should return "Email is not verified" if email is not verified', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
-      expect(
-        registeredUser.forgotPassword('john@example.com'),
-      ).to.equal('Email is not verified');
+      expect(registeredUser.forgotPassword('john@example.com')).to.equal('Email is not verified');
     });
 
     it('should return "No user with this email" if email does not match', function () {
@@ -92,7 +99,7 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
       ).to.equal(true);
     });
 
-    it('should have function to change password and return "Invalid password" if old password does not match', function () {
+    it('should return "Invalid password" if old password does not match', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
       registeredUser.verifyEmail();
       expect(
@@ -100,7 +107,7 @@ describe('Unit 4 - Optional - Classes: Guest and RegisteredUser', function () {
       ).to.equal('Invalid password');
     });
 
-    it('should have function to change password and return "Email is not verified" if email is not verified when changing password', function () {
+    it('should return "Email is not verified" if email is not verified when changing password', function () {
       const registeredUser = new RegisteredUser('John Doe', 'john@example.com', 'password123');
       expect(
         registeredUser.changePassword('password123', 'newpassword'),
