@@ -53,15 +53,15 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/ovartem/yet_another_js_course#readme",
   "dependencies": {
-    "chai": "^6.2.0",
+    "chai": "^6.2.1",
     "chance": "^1.1.13",
     "lodash": "^4.17.21",
-    "mocha": "^11.7.4",
+    "mocha": "^11.7.5",
     "sinon": "^21.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@stylistic/eslint-plugin": "^5.5.0",
-    "eslint": "^9.38.0"
+    "@eslint/js": "^9.39.2",
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "eslint": "^9.39.2"
   }
 }

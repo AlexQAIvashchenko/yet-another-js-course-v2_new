@@ -31,7 +31,6 @@ describe('Unit 5 - Optional - Medium - Promises:', () => {
       const result = await greetWithDelayPromise('Alice', 2);
 
       expect(spy.calledWith('Hello, Alice!')).to.be.true;
-      expect(spy.calledWith('Welcome to the promises chains.')).to.be.true;
       expect(result).to.equal('Welcome to the promises chains.');
     });
 

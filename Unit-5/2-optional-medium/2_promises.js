@@ -19,13 +19,13 @@ let task1Func;
  * Where `name` is string, `delay` is a delay in seconds.
  * Inside the function return a promise that uses `setTimeout` to delay the execution by the specified delay.
  * After the delay it should print in logs: "Hello, ${name}!" and return string "Welcome to the promises chains."
- * NOTE: You should use `then` function to chain the promises
  *
  * @example
+ * If function will be used in the below way:
  * greetWithDelay("Alice", 5)
  *   .then((result) => console.log(result));
  *
- * The output of the code should be:
+ * The output will be:
  * ----
  *   {nothing happens for 5 seconds}
  * "Hello, Alice!"
