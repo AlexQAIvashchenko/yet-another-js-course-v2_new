@@ -15,7 +15,7 @@
  * Create "var" variable named myNum and set its value equal to 74
  */
 
-// enter your code here
+var myNum = 74;
 
 /**
  * Level - Easy
@@ -23,7 +23,7 @@
  * Create "let" variable named myText and set its value equal to "Jack"
  */
 
-// enter your code here
+let myText = 'Jack';
 
 /**
  * Level - Easy
@@ -31,7 +31,7 @@
  * Create "const" variable named myBool and set its value equal to false
  */
 
-// enter your code here
+const myBool = false;
 
 // !!! Starting from this line I'd recommend to use `let` (or const if applicable) to initialize variables
 
@@ -41,7 +41,7 @@
  * Create variable named myNull and set its value equal to null
  */
 
-// enter your code here
+let myNull = null;
 
 /**
  * Level - Easy
@@ -49,7 +49,7 @@
  * Create variable named myUndefined and set its value equal to undefined
  */
 
-// enter your code here
+let myUndefined = undefined;
 
 /**
  * Level - Easy
@@ -57,7 +57,7 @@
  * Create variable named myArr and set its value to be an array of numbers from 2 to 7
  */
 
-// enter your code here
+let myArr = [2, 3, 4, 5, 6, 7];
 
 /**
  * Level - Easy
@@ -65,7 +65,7 @@
  * Create variable named myArr1 and set its value to be an empty array
  */
 
-// enter your code here
+let myArr1 = [];
 
 /**
  * Level - Easy
@@ -74,7 +74,8 @@
  * make first array element to be equal to 'I am the first'
  */
 
-// enter your code here
+let myArr1_1 = [];
+myArr1_1[0] = 'I am the first';
 
 /**
  * Level - Easy
@@ -83,7 +84,7 @@
  * NOTE: you should use myArr variable here
  */
 
-// enter your code here
+let fourthElement = myArr[3];
 
 /**
  * Level - Easy
@@ -92,7 +93,7 @@
  * NOTE: you should use myArr variable here
  */
 
-// enter your code here
+let arrayOperations = myArr[3] - myArr[2];
 
 /**
  * Level - Easy
@@ -101,7 +102,7 @@
  * NOTE: you should use myNum variable here
  */
 
-// enter your code here
+let myNum2 = myNum / 2;
 
 /**
  * Level - Easy
@@ -110,7 +111,7 @@
  * NOTE: Use myText and myNum2 variables to solve it. Result should be something like "George is 21"
  */
 
-// enter your code here
+let myText2 = myText + ' ' + 'is' + ' ' + myNum2;
 
 /**
  * Level - Easy
@@ -118,7 +119,7 @@
  * Create variable named myBool2 and set its value to be equality comparison (not strict) of myNum and myNum2 variables
  */
 
-// enter your code here
+let myBool2 = myNum == myNum2;
 
 /**
  * Level - Easy
@@ -127,7 +128,7 @@
  * NOTE: string should be used
  */
 
-// enter your code here
+let myBool3 = myNum2 === '37';
 
 /**
  * Level - Easy
@@ -135,7 +136,7 @@
  * Create variable named myUndefined2 and set its value equal to undefined without "undefined" word usage
  */
 
-// enter your code here
+let myUndefined2;
 
 /**
  * Level - Easy
@@ -143,7 +144,7 @@
  * Create variable named myObj and set its value as object with key firstName and value "John"
  */
 
-// enter your code here
+let myObj = { firstName: 'John' };
 
 /**
  * Level - Easy
@@ -151,7 +152,7 @@
  * Set new key/property to myObj object named lastName with value "Dou"
  */
 
-// enter your code here
+myObj.lastName = "Dou";
 
 /**
  * Level - Easy
@@ -160,7 +161,7 @@
  * NOTE: you should use myObj in this task
  */
 
-// enter your code here
+myObj.fullName = myObj.firstName + ' ' + myObj.lastName;
 
 module.exports = {
   myNum,
