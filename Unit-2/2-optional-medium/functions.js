@@ -14,9 +14,16 @@
  * NOTE: use rest parameter and use it to get first param value
  */
 
-const task1Func = (/** add function parameters */) => {
-  // enter your code here
+const { some } = require("lodash");
+
+const task1Func = (...params) => {
+  return {
+    paramsNumber: params.length,
+    firstParam: params[0],
+  };
 };
+
+console.log(task1Func('Jack', 27, 'London'));
 
 /**
  * Level - Normal
@@ -27,9 +34,11 @@ const task1Func = (/** add function parameters */) => {
  * task13Func(5) // => gooooogle
  */
 
-const task2Func = (/** add function parameters */) => {
-  // enter your code here
+const task2Func = (number) => {
+  return `g${'o'.repeat(number)}gle`;
 };
+
+console.log(task2Func(5));
 
 /**
  * Level - Normal
@@ -50,9 +59,11 @@ const task2Func = (/** add function parameters */) => {
  * task3Func(6, 4) should return `"buzz"` (one > 5, one <= 5)
  */
 
-const task3Func = (/** add function parameters */) => {
-  // enter your code here
+const task3Func = (a, b) => {
+    return (a > 5 && b > 5) || (a <= 5 && b <= 5) ? 'fizz' : 'buzz';
 };
+
+console.log(task3Func(4, 11));
 
 /**
  * Level - Normal
@@ -69,12 +80,16 @@ const task4Object = {
   age: 25,
   friend: 'wolf',
   keys() {
-    // enter your code here
+    for (const key in this) {
+      console.log(key);
+    }
   },
   call() {
-    // enter your code here
+    return `My name is ${this.name} ${this.lastName}, and I am ${this.age} years old. My best friend is a ${this.friend}`;
   },
 };
+
+console.log(task4Object.call());
 
 /**
  * Level - Normal
@@ -91,8 +106,21 @@ const task4Object = {
  * if someFuncWithParam = (resultOfTheAsyncFunc) => console.log(`Result = ${resultOfTheAsyncFunc}`);
  */
 
-// enter your code below
 let calculateSum;
+
+calculateSum = (numbers, someFuncWithParam) => {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  someFuncWithParam(sum);
+};
+
+const someFuncWithParam = (result) => {
+  console.log(`Result = ${result}`);
+};
+
+calculateSum([1, 2, 3, 4], someFuncWithParam);
 
 /**
  * Level - Normal
@@ -117,8 +145,16 @@ let calculateSum;
 
 const someFunc = () => console.log('Callback invoked!');
 
-// enter your code below
 let countdown;
+
+countdown = function (duration, someFunc) {
+  for (let i = 0; i <= duration; i++) {
+    console.log(i);
+  }
+  return someFunc();
+}
+
+countdown(10, someFunc);
 
 module.exports = {
   task1Func,
