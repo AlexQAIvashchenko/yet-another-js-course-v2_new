@@ -32,7 +32,11 @@ const task1n = 10; // 10! = 3628800
 const task2Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; // => "BDFH"
 let task2Res = '';
 
-// enter your code here
+for (let i = 0; i < task2Array.length; i++){
+  if (i % 2) {
+    task2Res += task2Array[i];
+  }
+}
 
 /**
  * Level - Normal
@@ -46,7 +50,9 @@ let task2Res = '';
 const task3Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']; // => "IGECA"
 let task3Res = '';
 
-// enter your code here
+for (let i = task3Array.length - 2; i >= 0; i -= 2) {
+  task3Res += task3Array[i];
+}
 
 /**
  * Level - Normal
@@ -60,7 +66,11 @@ let task3Res = '';
 const task4Array = [2, 7, 15, 1, 0, 100200];
 let task4Res = 0;
 
-// enter your code here
+for (let i = 0; i < task4Array.length; i++){
+  if (task4Array[i] % 2 === 0) {
+    task4Res += task4Array[i];
+  }
+}
 
 module.exports = {
   task1n,

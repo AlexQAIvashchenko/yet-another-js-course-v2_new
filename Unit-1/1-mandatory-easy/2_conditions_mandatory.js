@@ -19,7 +19,9 @@
 const x1 = 87;
 let task1;
 
-// enter your code here
+if (x1 > 100) {
+  task1 = 'Greater than 100'
+} else { task1 = 'Less than or equal 100' };
 
 /**
  * Level - Easy
@@ -33,7 +35,13 @@ let task1;
 const x2 = 49;
 let task2;
 
-// enter your code here
+if (x2 >= 50) {
+  task2 = 'Greater than or equal to 50';
+} else if (x2 < 50 && x2 > -50) {
+  task2 = 'In range between -50 to 50';
+} else if (x2 < -50 || x2 === -50) {
+  task2 = 'Less than -50'
+}
 
 /**
  * Level - Easy
@@ -47,7 +55,11 @@ let task3;
 const x3 = 3;
 const y3 = 7;
 
-// enter your code here
+if (y3 < 10) {
+  task3 = x3 + y3;
+} else if (y3 >= 10) {
+  task3 = x3 * y3;
+}
 
 /**
  * Level - Easy
@@ -60,7 +72,8 @@ const y3 = 7;
 
 let task4;
 
-// enter your code here
+task4 = y3 < 10 ? x3 + y3 : x3 * y3
+
 
 /**
  * Level - Easy:
@@ -79,7 +92,20 @@ const num1 = 3;
 const num2 = 7;
 const operator = 'add';
 
-// enter your code here
+switch (operator) {
+  case "add":
+    task5 = num1 + num2;
+    break;
+  case "subtract":
+    task5 = num1 - num2;
+    break;
+  case "multiply":
+    task5 = num1 * num2;
+    break;
+  case "divide":
+    task5 = num1 / num2;
+    break;
+}
 
 /**
  * Level - Easy
@@ -91,7 +117,7 @@ const operator = 'add';
 const someVar = false;
 let task6;
 
-// modify and enter your code here
+task6 = !someVar;
 
 /**
  * Level - Easy
@@ -104,7 +130,7 @@ const someVar2 = true;
 let task7;
 
 // uncomment and modify code below
-// task7 = someVar {remove this curly braces and enter correct code} someVar2;
+task7 = someVar || someVar2;
 
 module.exports = {
   x1,

@@ -18,6 +18,22 @@ const num1 = 3;
 const num2 = 7;
 const operator = 'add';
 
+switch (operator) {
+  case "add":
+    task1 = num1 + num2;
+    break;
+  case "subtract":
+    task1 = num1 - num2;
+    break;
+  case "multiply":
+    task1 = num1 * num2;
+    break;
+  case "divide":
+    task1 = num1 / num2;
+    break;
+}
+
+
 /**
  * Level - Normal
  * Task - 2
@@ -34,7 +50,16 @@ const productPrice = 49;
 let discount;
 let task2;
 
-// enter your code here
+if (productPrice >= 1000) {
+  discount = 0.3
+} else if (productPrice < 1000 && productPrice > 0) {
+  discount = 0.2;
+} else if (productPrice < 0) {
+  discount = null;
+} else {
+  discount = undefined;
+}
+task2 = discount;
 
 /**
  * Level - Normal
@@ -52,9 +77,15 @@ let task2;
 const totalPrice = 420;
 let task3;
 
-// enter your code here
-
-
+if (totalPrice >= 2701 && totalPrice <= 6500) {
+  task3 = totalPrice * 0.45;
+} else if (totalPrice >= 1351 && totalPrice <= 2700) {
+  task3 = totalPrice * 0.30;
+} else if (totalPrice >= 351 && totalPrice <= 1350) {
+  task3 = totalPrice * 0.15;
+} else if (totalPrice >= 0 && totalPrice <= 350) {
+  task3 = 0;
+}
 
 /**
  * Level - Normal
@@ -68,7 +99,13 @@ let task3;
 const x1 = 87;
 let task4;
 
-// modify and enter your code here
+if (x1 > 100) {
+  task4 = 'Greater than 100';
+}
+
+if (x1 <= 100) {
+  task4 = 'Less than or equal 100';
+}
 
 /**
  * Level - Normal
@@ -83,7 +120,7 @@ const a = 10;
 const b = 4;
 let task5;
 
-// enter your code here
+task5 = (a > 5 && b > 5) || (a <= 5 && b <= 5);
 
 module.exports = {
   num1,

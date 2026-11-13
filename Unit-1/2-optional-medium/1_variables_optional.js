@@ -12,7 +12,7 @@
  * NOTE: use `new Array` syntax
  */
 
-// enter your code here
+let myArr1 = new Array();
 
 /**
  * Level - Normal
@@ -22,7 +22,7 @@
  * NOTE: use `new Array` syntax
  */
 
-// enter your code here
+let myArr2 = new Array(3);
 
 /**
  * Level - Normal
@@ -36,7 +36,7 @@
  * NOTE: use `new Array` syntax
  */
 
-// enter your code here
+let myArr3 = new Array(10, null, "I'm the third one", false);
 
 module.exports = {
   myArr1,
