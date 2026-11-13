@@ -1,6 +1,7 @@
 const Chance = require('chance');
 const chance = new Chance();
 
+
 /**
  * Additional Reading:
  *
@@ -19,7 +20,10 @@ const chance = new Chance();
  * NOTE: Use function definition (also called a function declaration, or function statement)
  */
 
-// enter your code here
+function task1Func() {
+  return true;
+}
+console.log(task1Func());
 
 /**
  * Level - Easy
@@ -30,7 +34,11 @@ const chance = new Chance();
  * NOTE2: you can hardcode the year value OR you can google how to get current year in JS
  */
 
-// enter your code here
+let task2Func = function calcAge(year) {
+  const currentYear = new Date().getFullYear();
+  return currentYear - year;
+}
+console.log(task2Func(2000));
 
 /**
  * Level - Easy
@@ -42,7 +50,17 @@ const chance = new Chance();
  * NOTE: Use function expression with arrow function notation
  */
 
-// enter your code here
+let task3Func = (gender) => {
+  if (gender === 0) {
+  return 'My gender is Other'
+  } else if (gender === 1) {
+    return 'My gender is man'
+  } else {
+    return 'My gender is woman'
+  };
+}
+
+console.log(task3Func(2));
 
 /**
  * Level - Easy
@@ -51,9 +69,11 @@ const chance = new Chance();
  * NOTE: assume parameters are always numbers
  */
 
-function task4Func(/** add function parameters */) {
-  // enter your code here
+function task4Func(num1, num2) {
+  return num1 + num2;
 }
+
+console.log(task4Func(2, 6));
 
 /**
  * Level - Easy
@@ -62,9 +82,11 @@ function task4Func(/** add function parameters */) {
  * Just make second parameter to have a default value equal 10
  */
 
-function task5Func(/** add function parameters */) {
-  // enter your code here
+function task5Func(num1, num2 = 4) {
+  return num1 + num2;
 }
+
+console.log(task5Func(3));
 
 /**
  * Level - Easy
@@ -72,10 +94,13 @@ function task5Func(/** add function parameters */) {
  * Create a function task6Func which will get an object, e.g. {firstName: "Jack", lastName: "London"}
  * and returns a string of the firstName plus lastName, separated by space
  */
+let obj = { firstName: "Jack", lastName: "London"}
 
-function task6Func(/** add function parameters */) {
-  // enter your code here
+function task6Func(obj) {
+  return `${obj.firstName} ${obj.lastName}`;
 }
+
+console.log(task6Func(obj));
 
 /**
  * Level - Easy
@@ -92,9 +117,15 @@ function task6Func(/** add function parameters */) {
  * }
  */
 
-function task7Func(/** add function parameters */) {
-  // enter your code here
+function task7Func(firstName, lastName, age) {
+    return {
+      firstName: firstName || '',
+      lastName: lastName || '',
+      age: age || 0,
+    };
 }
+
+console.log(task7Func('Jack', 'London', 52));
 
 /**
  * Level - Easy
@@ -104,9 +135,12 @@ function task7Func(/** add function parameters */) {
  * HINT: think about a remainder of two numbers
  */
 
-function task8Func(/** add function parameters */) {
-  // enter your code here
-}
+function task8Func(num) {
+  if (num % 2 === 0) {
+    return true;
+  } else { return false}
+};
+console.log(task8Func(12));
 
 /**
  * Level - Easy
@@ -117,9 +151,20 @@ function task8Func(/** add function parameters */) {
  * task9Func(["eleven", "ten", "two", "four"]) // => ten
  */
 
-function task9Func(/** add function parameters */) {
-  // enter your code here
+const words = ["eleven", "ten", "two", "four"];
+
+function task9Func(words) {
+  let word = words[0];
+
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length < word.length) {
+      word = words[i];
+    }
+  }
+  return word;
 }
+
+console.log(task9Func(words));
 
 /**
  * Level - Easy
@@ -129,9 +174,19 @@ function task9Func(/** add function parameters */) {
  * e.g [ {direction: "Kiyv - Krakow", distance: 879 }, { direction: "Kiyv - Tokyo", distance: 8193 } ]
  */
 
-function task10Func(/** add function parameters */) {
-  // enter your code here
+const competitions = [{ direction: "Kiyv - Krakow", distance: 879 }, { direction: "Kiyv - Tokyo", distance: 8193 }];
+
+function task10Func(direction) {
+  let total = 0;
+
+  for (const key in direction) {
+    total += direction[key].distance;
+  }
+  return total;
 }
+
+console.log(task10Func(competitions));
+
 
 /**
  * Level - Easy
@@ -150,9 +205,13 @@ const someFunc1 = () => {
   return chance.sentence(); // returns random sentence
 };
 
-const task11Func = (/** add function parameters */) => {
-  // enter your code here
+const task11Func = (someFunc1) => {
+  const result = someFunc1();
+  return `Callback result = ${result}`;
 };
+
+console.log(task11Func(someFunc1));
+
 
 /**
  * Level - Easy
@@ -174,8 +233,14 @@ const someFuncWithParam = (resultOfTheCallbackFunc) => {
   console.log(`Result = ${resultOfTheCallbackFunc}`);
 };
 
-// enter your code below
 let addNumbers;
+
+addNumbers = function (num1, num2, callback) {
+  const sum = num1 + num2;
+  callback(sum);
+}
+
+addNumbers(1, 2, someFuncWithParam);
 
 module.exports = {
   task1Func,
