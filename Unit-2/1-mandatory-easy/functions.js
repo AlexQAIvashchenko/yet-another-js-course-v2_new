@@ -136,9 +136,7 @@ console.log(task7Func('Jack', 'London', 52));
  */
 
 function task8Func(num) {
-  if (num % 2 === 0) {
-    return true;
-  } else { return false}
+  return num % 2 === 0
 };
 console.log(task8Func(12));
 
