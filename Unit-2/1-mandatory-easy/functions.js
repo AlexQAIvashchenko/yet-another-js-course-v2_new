@@ -34,10 +34,11 @@ console.log(task1Func());
  * NOTE2: you can hardcode the year value OR you can google how to get current year in JS
  */
 
-let task2Func = function calcAge(year) {
-  const currentYear = new Date().getFullYear();
-  return currentYear - year;
-}
+
+let task2Func = function (year) {
+  return new Date().getFullYear() - year;
+};
+
 console.log(task2Func(2000));
 
 /**
@@ -51,14 +52,10 @@ console.log(task2Func(2000));
  */
 
 let task3Func = (gender) => {
-  if (gender === 0) {
-  return 'My gender is Other'
-  } else if (gender === 1) {
-    return 'My gender is man'
-  } else {
-    return 'My gender is woman'
-  };
-}
+  if (gender === 0) return 'My gender is other';
+  if (gender === 1) return 'My gender is woman';
+  return 'My gender is man';
+};
 
 console.log(task3Func(2));
 
@@ -82,7 +79,7 @@ console.log(task4Func(2, 6));
  * Just make second parameter to have a default value equal 10
  */
 
-function task5Func(num1, num2 = 4) {
+function task5Func(num1, num2 = 10) {
   return num1 + num2;
 }
 
@@ -94,7 +91,7 @@ console.log(task5Func(3));
  * Create a function task6Func which will get an object, e.g. {firstName: "Jack", lastName: "London"}
  * and returns a string of the firstName plus lastName, separated by space
  */
-let obj = { firstName: "Jack", lastName: "London"}
+let obj = { firstName: 'Jack', lastName: 'London' };
 
 function task6Func(obj) {
   return `${obj.firstName} ${obj.lastName}`;
@@ -118,11 +115,11 @@ console.log(task6Func(obj));
  */
 
 function task7Func(firstName, lastName, age) {
-    return {
-      firstName: firstName || '',
-      lastName: lastName || '',
-      age: age || 0,
-    };
+  return {
+    firstName: firstName || '',
+    lastName: lastName || '',
+    age: age || 0,
+  };
 }
 
 console.log(task7Func('Jack', 'London', 52));
@@ -136,7 +133,7 @@ console.log(task7Func('Jack', 'London', 52));
  */
 
 function task8Func(num) {
-  return num % 2 === 0
+  return num % 2 !== 0;
 };
 console.log(task8Func(12));
 
@@ -149,7 +146,7 @@ console.log(task8Func(12));
  * task9Func(["eleven", "ten", "two", "four"]) // => ten
  */
 
-const words = ["eleven", "ten", "two", "four"];
+const words = ['eleven', 'ten', 'two', 'four'];
 
 function task9Func(words) {
   let word = words[0];
@@ -172,7 +169,7 @@ console.log(task9Func(words));
  * e.g [ {direction: "Kiyv - Krakow", distance: 879 }, { direction: "Kiyv - Tokyo", distance: 8193 } ]
  */
 
-const competitions = [{ direction: "Kiyv - Krakow", distance: 879 }, { direction: "Kiyv - Tokyo", distance: 8193 }];
+const competitions = [{ direction: 'Kiyv - Krakow', distance: 879 }, { direction: 'Kiyv - Tokyo', distance: 8193 }];
 
 function task10Func(direction) {
   let total = 0;
@@ -236,7 +233,7 @@ let addNumbers;
 addNumbers = function (num1, num2, callback) {
   const sum = num1 + num2;
   callback(sum);
-}
+};
 
 addNumbers(1, 2, someFuncWithParam);
 
