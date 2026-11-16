@@ -13,7 +13,7 @@ const { indexOf, filter } = require('lodash');
  */
 
 let task1Func = (arr) => {
-  return arr[2];
+  return arr[1];
 };
 
 console.log(task1Func([10, true, 'qa', 4.6]));
