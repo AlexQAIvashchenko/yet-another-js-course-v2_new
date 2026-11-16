@@ -66,11 +66,8 @@ console.log(task4Func(6, 'JS'));
  * !!!NOTE: don't use any cycles
  */
 
-let task5Func = (people) => {
-  return people.filter(person => person.name === 'Jack' || person.age < 30).length;
-};
-
-console.log(task5Func([{ name: 'Jane Dou', age: 45 }, { name: 'Peter Parker', age: 18 }]));
+let task5Func = (people) =>
+  people.filter(person => person.name.split(/\s+/)[0] === 'Jack' || person.age < 30).length;
 
 /**
  * Level - Easy
