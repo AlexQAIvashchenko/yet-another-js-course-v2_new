@@ -4,6 +4,8 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 
+const { indexOf, filter } = require('lodash');
+
 /**
  * Level - Easy
  * Task - 1
@@ -11,8 +13,10 @@
  */
 
 let task1Func = (arr) => {
-  // enter your code here
+  return arr[1];
 };
+
+console.log(task1Func([10, true, 'qa', 4.6]));
 
 /**
  * Level - Easy
@@ -21,8 +25,11 @@ let task1Func = (arr) => {
  */
 
 let task2Func = (arr) => {
-  // enter your code here
+  arr.push('new item');
+  return arr;
 };
+
+console.log(task2Func([34, 'qa, false']));
 
 /**
  * Level - Easy
@@ -32,8 +39,10 @@ let task2Func = (arr) => {
  */
 
 let task3Func = (arr1, arr2) => {
-  // enter your code here
+  return arr1.concat(arr2);
 };
+
+console.log(task3Func([22, false], ['text', 'qa']));
 
 /**
  * Level - Easy
@@ -43,8 +52,10 @@ let task3Func = (arr1, arr2) => {
  */
 
 let task4Func = (length, value) => {
-  // enter your code here
+  return Array(length).fill(value);
 };
+
+console.log(task4Func(6, 'JS'));
 
 /**
  * Level - Easy
@@ -55,9 +66,8 @@ let task4Func = (length, value) => {
  * !!!NOTE: don't use any cycles
  */
 
-let task5Func = (arr) => {
-  // enter your code here
-};
+let task5Func = (people) =>
+  people.filter(person => person.name.split(/\s+/)[0] === 'Jack' || person.age < 30).length;
 
 /**
  * Level - Easy
@@ -67,9 +77,11 @@ let task5Func = (arr) => {
  * return new array of all people who are older than 30
  */
 
-let task6Func = (arr) => {
-  // enter your code here
+let task6Func = (people) => {
+  return people.filter(person => person.age > 30);
 };
+
+console.log(task6Func([{ name: 'Jane Dou', age: 45 }, { name: 'Peter Parker', age: 18 }]));
 
 /**
  * Level - Easy
@@ -86,9 +98,31 @@ let task6Func = (arr) => {
  * "adult" from 22 and greater
  */
 
-let task7Func = (arr) => {
-  // enter your code here
+let task7Func = (people) => {
+  return people.map((person) => {
+    let maturity;
+
+    if (person.age <= 1) {
+      maturity = 'baby';
+    } else if (person.age <= 3) {
+      maturity = 'toddler';
+    } else if (person.age <= 5) {
+      maturity = 'preschooler';
+    } else if (person.age <= 12) {
+      maturity = 'gradeschooler';
+    } else if (person.age <= 18) {
+      maturity = 'teen';
+    } else if (person.age <= 21) {
+      maturity = 'young adult';
+    } else {
+      maturity = 'adult';
+    }
+    return { ...person, maturity };
+  });
 };
+
+console.log(
+  task7Func([{ name: 'Jane', age: 45 }, { name: 'Peter', age: 18 }]));
 
 module.exports = {
   task1Func,
