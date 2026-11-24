@@ -50,11 +50,7 @@ console.log(task2Func('testing aqa', 'qa'));
  */
 
 let task3Func = (str1, str2) => {
-  if (str1.includes(str2)) {
-    return str1.replace(str2, 'Ah-a-ha-ha. Changing a part of the string');
-  } else {
-    return str1;
-  }
+  return str1.replace(str2, 'Ah-a-ha-ha. Changing a part of the string');
 };
 
 console.log(task3Func('testing aqa', 'qa'));
