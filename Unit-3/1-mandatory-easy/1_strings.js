@@ -18,11 +18,7 @@
  */
 
 let task1Func = (str1, str2) => {
-  if (str1.includes(str2)) {
-    return true;
-  } else {
-    return false;
-  }
+  return str1.includes(str2)
 };
 
 console.log(task1Func('testing', 'test'));
