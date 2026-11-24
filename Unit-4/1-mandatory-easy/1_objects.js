@@ -11,7 +11,15 @@
  * Object should contain 'getFullName' method that returns full name ('firstName lastName')
  */
 
-let person; // enter your code here
+let person = {
+  firstName: 'Alex',
+  lastName: 'QA',
+  getFullName() {
+    return this.firstName + ' ' + this.lastName;
+  }
+};
+
+console.log(person.getFullName());
 
 /**
  * Level - Easy
@@ -24,8 +32,11 @@ let person; // enter your code here
  */
 
 function makeRobot(person) {
-  // enter your code here
+  Object.assign(person, { batteryLevel: 3 });
+  return person;
 }
+
+console.log(makeRobot({ ...person }));
 
 /**
  * Level - Easy
@@ -36,8 +47,10 @@ function makeRobot(person) {
  */
 
 function isARobot(obj) {
-  // enter your code here
+  return Object.hasOwn(obj, 'batteryLevel');
 }
+
+console.log(isARobot(person));
 
 module.exports = {
   person,

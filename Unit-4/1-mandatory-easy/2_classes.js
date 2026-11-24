@@ -18,8 +18,22 @@
 
 // enter your code here
 class Figure {
+  name;
+  numberOfPoints;
 
-}
+  constructor(name, numberOfPoints) {
+    this.name = name;
+    this.numberOfPoints = numberOfPoints;
+  }
+  getDescription() {
+    return `This is a ${this.name} with ${this.numberOfPoints} points`;
+  }
+};
+
+const figure = new Figure(3, 'triangle');
+console.log(figure.getDescription());
+
+
 
 /**
  * Level - Easy
@@ -27,7 +41,7 @@ class Figure {
  * Create an instance of a class Figure
  */
 
-let figure; // enter your code here
+let figure1 = new Figure('square', 4);
 
 /**
  * Level - Easy
@@ -39,9 +53,18 @@ let figure; // enter your code here
  */
 
 // enter your code here
-class Square {
+class Square extends Figure {
+  constructor(name, sideLength) {
+    super(name, 4);
+    this.sideLength = sideLength;
+    this.figureArea = sideLength * sideLength;
+  }
 
+  get area() {
+    return this.figureArea;
+  }
 }
+
 
 /**
  * Level - Easy
@@ -49,7 +72,7 @@ class Square {
  * Create an instance of a class Square
  */
 
-let square; // enter your code here
+let square = new Square('square', 5);
 
 module.exports = {
   figure,
