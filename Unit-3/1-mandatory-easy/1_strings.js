@@ -17,7 +17,12 @@
  * It should return true or false
  */
 
-let task1Func; // enter your code here
+let task1Func = (str1, str2) => {
+  return str1.includes(str2)
+};
+
+console.log(task1Func('testing', 'test'));
+console.log(task1Func('testing', 'qa'));
 
 /**
  * Level - Easy
@@ -27,7 +32,11 @@ let task1Func; // enter your code here
  * or -1 in case str2 is not a substring of str1
  */
 
-let task2Func; // enter your code here
+let task2Func = (str1, str2) => {
+  return str1.indexOf(str2);
+};
+
+console.log(task2Func('testing aqa', 'qa'));
 
 /**
  * Level - Easy
@@ -40,7 +49,12 @@ let task2Func; // enter your code here
  * task3Func('tests', 'es') => 'tAh-a-ha-ha. Changing a part of the stringts'
  */
 
-let task3Func; // enter your code here
+let task3Func = (str1, str2) => {
+  return str1.replace(str2, 'Ah-a-ha-ha. Changing a part of the string');
+};
+
+console.log(task3Func('testing aqa', 'qa'));
+console.log(task3Func('testing aqa', '12'));
 
 /**
  * Level - Easy
@@ -50,7 +64,17 @@ let task3Func; // enter your code here
  * If result will be an empty string it should return 'STRING IS EMPTY'
  */
 
-let task4Func; // enter your code here
+let task4Func = (str) => {
+  const result = str.trim();
+  if (result != '') {
+    return result;
+  } else {
+    return 'STRING IS EMPTY';
+  }
+};
+
+console.log(task4Func(' testing aqa '));
+console.log(task4Func('  '));
 
 module.exports = {
   task1Func,

@@ -7,7 +7,16 @@
  * console.log(task1Func(123)); // 'This is not a string!'
  */
 
-let task1Func; // enter your code here
+let task1Func = (str) => {
+  if (typeof str === 'string') {
+    return str.split('').reverse().join('');
+  } else {
+    return 'This is not a string!';
+  }
+};
+
+console.log(task1Func('google'));
+console.log(task1Func(123));
 
 /**
  * Level - Normal
@@ -22,7 +31,18 @@ let task1Func; // enter your code here
  * console.log(task2Func(21)); // 1
  */
 
-let task2Func; // enter your code here
+let task2Func = (year) => {
+  if (typeof year === 'number') {
+    return Math.ceil(year / 100);
+  } else {
+    return 'This is not a number!';
+  }
+};
+
+console.log(task2Func(1325));
+console.log(task2Func(1801));
+console.log(task2Func(601));
+console.log(task2Func(21));
 
 /**
  * Level - Normal
@@ -37,7 +57,16 @@ let task2Func; // enter your code here
  * !!!NOTE: don't use for loops
  */
 
-let task3Func; // enter your code here
+let task3Func = (str1, str2) => {
+  const result1 = str1.toLowerCase();
+  const result2 = str2.toLowerCase();
+  return result1.split(result2).length -1;
+};
+
+console.log(task3Func('Google', 'o'));
+console.log(task3Func('I know JS', 'j'));
+console.log(task3Func('', 'z'));
+
 
 /**
  * Level - Normal
@@ -48,7 +77,11 @@ let task3Func; // enter your code here
  * console.log(task4Func("MR.[Johns] was responsible for ...")); // => "MR.[----] was responsible for ..."
  */
 
-let task4Func; // enter your code here
+let task4Func = (str) => {
+  return str.replace(/\[[^\]]*\]/, '[----]');
+};
+
+console.log(task4Func('MR.[Johns] was responsible for ...'));
 
 /**
  * Level - Normal
@@ -62,7 +95,16 @@ let task4Func; // enter your code here
  * console.log(task5Func('Hello', 6)); // 'Hello'
  */
 
-let task5Func; // enter your code here
+let task5Func = (str, maxLength) => {
+  if (str.length > maxLength) {
+    return str.slice(0, maxLength) + '...';
+  } else {
+    return str;
+  }
+};
+
+console.log(task5Func('The story begins long-long ago.', 6));
+console.log(task5Func('Hello', 6));
 
 module.exports = {
   task1Func,

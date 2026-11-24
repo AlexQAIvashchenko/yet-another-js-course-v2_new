@@ -9,8 +9,17 @@
  */
 
 let task1Func = (arr) => {
-  // enter your code here
+  let minIdx = 0;
+
+  arr.forEach((element, index) => {
+    if (element < arr[minIdx]) {
+      minIdx = index;
+    }
+  });
+  return minIdx;
 };
+
+console.log(task1Func([2, 5, 6, 3, 1, 8]));
 
 /**
  * Level - Normal
@@ -20,8 +29,10 @@ let task1Func = (arr) => {
  */
 
 let task2Func = (arr) => {
-  // enter your code here
+  return arr.filter(value => value !== null && value !== undefined).length;
 };
+
+console.log(task2Func([1, null, 2, undefined, 10, 'test']));
 
 /**
  * Level - Normal
@@ -31,8 +42,17 @@ let task2Func = (arr) => {
  */
 
 let task3Func = (arr) => {
-  // enter your code here
+  const validEntries = arr.filter(
+    value => value !== null && value !== undefined
+  );
+  const invalidCount = arr.length - validEntries.length;
+  if (invalidCount > 3) {
+    throw new Error('The data needs to be reviewed');
+  }
+  return validEntries;
 };
+
+console.log(task3Func([1, null, 8, undefined, 3]));
 
 module.exports = {
   task1Func,
