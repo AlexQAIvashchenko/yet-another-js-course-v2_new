@@ -6,8 +6,16 @@
  */
 
 function task1Func(obj) {
-  // enter your code here
+  const result = [];
+  for (const key in obj) {
+    if (typeof obj[key] === 'number') {
+      result.push(key);
+    }
+  }
+  return result;
 }
+
+console.log(task1Func({ age: 25, name: 'Alex' }));
 
 module.exports = {
   task1Func,
