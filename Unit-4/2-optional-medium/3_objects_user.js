@@ -13,7 +13,8 @@ const { User } = require('./2_class_user');
  */
 
 // enter your code here
-let user1;
+let user1 = new User('guest');
+user1.addSession();
 
 
 /**
@@ -23,7 +24,9 @@ let user1;
  */
 
 // enter your code here
-let user2;
+let user2 = new User('registered');
+user2.addSession();
+user2.addSession();
 
 
 module.exports = {

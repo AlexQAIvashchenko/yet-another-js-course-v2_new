@@ -17,7 +17,24 @@
  * 6) getter for globalRole that returns the globalRole
  */
 class User {
-  // enter your code here
+  #sessions = [];
+  #globalRole;
+
+  constructor(globalRole) {
+    this.#globalRole = globalRole;
+  }
+
+  addSession() {
+    this.#sessions.push(Date.now());
+  }
+
+  get sessions() {
+    return this.#sessions;
+  }
+
+  get globalRole() {
+    return this.#globalRole;
+  }
 }
 
 module.exports = {
